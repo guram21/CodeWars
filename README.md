@@ -1,4 +1,4 @@
-# solvedTasks
+# CodeWars
 #### Multiply
 ```javascript
 function multiply(a, b) {
