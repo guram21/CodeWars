@@ -14,3 +14,4 @@ user = 'Guram';
      console.log(s);
      return s;
    }
+const sevenStepStairs = drawStairs(7);
