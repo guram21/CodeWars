@@ -1,4 +1,10 @@
 # solvedTasks
+### Multiply
+```javascript
+function multiply(a, b) {
+  return a * b;
+}
+```
 #### Draw stairs
 ```javascript
 function drawStairs(n) {
