@@ -1,9 +1,10 @@
 # solvedTasks
 #### Draw stairs
+given a number n, draw stairs with 'I' n tall and n wide, with the tallest in the top left. 
+Example (with - to represent spaces; DO NOT USE THEM IN THE SOLUTIONS! USE SPACES IN SOLUTION! 
+the "-"s are for clarity.): draw_stairs(3) == '''I\n_I\n__I'''
 ```javascript
-let user; 
-user = 'Guram';
-```function drawStairs(n) {
+function drawStairs(n) {
    
      let s = '';
    
@@ -15,3 +16,4 @@ user = 'Guram';
      return s;
    }
 const sevenStepStairs = drawStairs(7);
+```
