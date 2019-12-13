@@ -28,3 +28,10 @@ function warnTheSheep(q) {
     : `Oi! Sheep number ${l - 1 - w}! You are about to be eaten by a wolf!`  
 }
 ```
+#### I love you, a little , a lot, passionately ... not at all
+````javascript
+function howMuchILoveYou(n) {
+  const fl = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all'];
+  return fl[(n - 1) % 6]
+}
+````
