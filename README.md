@@ -35,3 +35,18 @@ function howMuchILoveYou(n) {
   return fl[(n - 1) % 6]
 }
 ````
+#### Complementary DNA
+````javascript
+function DNAStrand(dna){
+  let r = '';
+  
+  for (let i = 0; i < dna.length; i++){
+    if(dna[i] === 'A') r += 'T';
+    if(dna[i] === 'T') r += 'A';
+    if(dna[i] === 'G') r += 'C';
+    if(dna[i] === 'C') r += 'G';
+  }
+  
+  return r;
+}
+````
