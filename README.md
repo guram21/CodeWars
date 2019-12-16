@@ -67,3 +67,17 @@ if(arr === null || arr.length === 0) return [];
   return [countPos, summNeg];
 }
 ````
+#### Sum of differences in array
+````javascript
+function sumOfDifferences(arr) {
+  const sorted = arr.sort((a, b) => b - a);
+  let summ = 0;
+
+  for(let i = 0; i < sorted.length - 1; i++){
+    summ += sorted[i] - sorted[i + 1];
+  }
+  
+  return summ;
+  
+}
+````
