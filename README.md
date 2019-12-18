@@ -91,3 +91,7 @@ function generateRange(min, max, step){
   return arr;
 }
 ````
+#### Keep Hydrated!
+```javascript
+const litres = time => Math.floor(time * 0.5);
+```
