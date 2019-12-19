@@ -6,16 +6,12 @@ const multiply = (a, b) => a * b;
 #### Draw stairs
 ```javascript
 function drawStairs(n) {
-   
-     let s = '';
-   
-     for (let i = 1; i <= n; i++) {
-       s += i === n ? 'I' : 'I\n' + ' '.repeat(i)
-     }
-   
-     console.log(s);
-     return s;
-   }
+  let s = '';
+  for (let i = 1; i <= n; i++) {
+    s += i === n ? 'I' : 'I\n' + ' '.repeat(i)
+  }
+  return s;
+}
 ```
 #### A wolf in sheep's clothing
 ```javascript
