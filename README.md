@@ -16,10 +16,9 @@ function drawStairs(n) {
 #### A wolf in sheep's clothing
 ```javascript
 function warnTheSheep(q) {
-    const l = q.length, w = q.indexOf('wolf');
-  return l === w + 1
-    ? 'Pls go away and stop eating my sheep'
-    : `Oi! Sheep number ${l - 1 - w}! You are about to be eaten by a wolf!`  
+  const l = q.length,
+    w = q.indexOf('wolf');
+  return l === w + 1 ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${l - 1 - w}! You are about to be eaten by a wolf!`
 }
 ```
 #### I love you, a little , a lot, passionately ... not at all
