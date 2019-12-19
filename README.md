@@ -93,3 +93,7 @@ function generateRange(min, max, step){
 ```javascript
 const litres = time => Math.floor(time * 0.5);
 ```
+#### Convert boolean values to strings 'Yes' or 'No'
+````javascript
+const boolToWord = bool => bool ? 'Yes' : 'No';
+````
