@@ -82,6 +82,14 @@ function generateRange(min, max, step){
 ```javascript
 const litres = time => Math.floor(time * 0.5);
 ```
+#### Training JS #1: create your first JS function and print "Helloworld!"
+````javascript
+function helloWorld() {
+  var str = 'Hello World!';
+  console.log(str);
+  return str;
+}
+````
 #### Convert boolean values to strings 'Yes' or 'No'
 ````javascript
 const boolToWord = bool => bool ? 'Yes' : 'No';
