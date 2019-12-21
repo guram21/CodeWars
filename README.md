@@ -90,6 +90,10 @@ function helloWorld() {
   return str;
 }
 ````
+#### Function 1 - hello world
+```javascript
+let greet = () => 'hello world!';
+```
 #### Convert boolean values to strings 'Yes' or 'No'
 ````javascript
 const boolToWord = bool => bool ? 'Yes' : 'No';
