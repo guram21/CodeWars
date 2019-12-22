@@ -92,7 +92,7 @@ function helloWorld() {
 ````
 #### Function 1 - hello world
 ```javascript
-let greet = () => 'hello world!';
+const greet = () => 'hello world!';
 ```
 #### Beginner Series #2 Clock
 ```javascript
