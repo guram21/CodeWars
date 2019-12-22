@@ -94,6 +94,10 @@ function helloWorld() {
 ```javascript
 let greet = () => 'hello world!';
 ```
+#### Beginner Series #2 Clock
+```javascript
+const past = (h, m, s) => (h * 3600 + m * 60 + s) * 1000;
+```
 #### Convert boolean values to strings 'Yes' or 'No'
 ````javascript
 const boolToWord = bool => bool ? 'Yes' : 'No';
