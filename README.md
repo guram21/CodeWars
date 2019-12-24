@@ -102,6 +102,10 @@ const past = (h, m, s) => (h * 3600 + m * 60 + s) * 1000;
 ````javascript
 const otherAngle = (a, b) => 180 - (a + b);
 ````
+#### Sum of angles
+````javascript
+const angle = n => 180 * (n - 2);
+````
 #### Convert boolean values to strings 'Yes' or 'No'
 ````javascript
 const boolToWord = bool => bool ? 'Yes' : 'No';
