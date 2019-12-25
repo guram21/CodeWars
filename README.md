@@ -106,6 +106,10 @@ const otherAngle = (a, b) => 180 - (a + b);
 ````javascript
 const angle = n => 180 * (n - 2);
 ````
+#### Breaking chocolate problem
+````javascript
+const breakChocolate = (n,m) => n * m > 0 ? n * m - 1 : 0;
+````
 #### Convert boolean values to strings 'Yes' or 'No'
 ````javascript
 const boolToWord = bool => bool ? 'Yes' : 'No';
