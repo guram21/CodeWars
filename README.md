@@ -110,6 +110,10 @@ const angle = n => 180 * (n - 2);
 ````javascript
 const breakChocolate = (n,m) => n * m > 0 ? n * m - 1 : 0;
 ````
+#### For Twins: 2. Math operations
+```javascript
+const iceBrickVolume = (radius, bottleLength, rimLength) => 2 * radius ** 2 * (bottleLength - rimLength);
+```
 #### Convert boolean values to strings 'Yes' or 'No'
 ````javascript
 const boolToWord = bool => bool ? 'Yes' : 'No';
