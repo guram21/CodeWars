@@ -114,6 +114,22 @@ const breakChocolate = (n,m) => n * m > 0 ? n * m - 1 : 0;
 ```javascript
 const iceBrickVolume = (radius, bottleLength, rimLength) => 2 * radius ** 2 * (bottleLength - rimLength);
 ```
+#### Simple multiplication
+```javascript
+var simpleMultiplication = number => number * (8 + number % 2)
+
+var simpleMultiplication = number => number * (8 + (number & 1));
+
+var simpleMultiplication = number => number * (number % 2 ? 9 : 8);
+
+var simpleMultiplication = number => number * (8 + (number % 2 != 0));
+
+var simpleMultiplication = number => number % 2 ? number * 9 : number * 8;
+
+var simpleMultiplication = number => (number << 3) + (number & 1) * number;
+
+var simpleMultiplication = number => !(number % 2) ? number * 8 : number * 9;
+```
 #### Convert boolean values to strings 'Yes' or 'No'
 ````javascript
 const boolToWord = bool => bool ? 'Yes' : 'No';
