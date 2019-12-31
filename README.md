@@ -130,6 +130,10 @@ var simpleMultiplication = number => (number << 3) + (number & 1) * number;
 
 var simpleMultiplication = number => !(number % 2) ? number * 8 : number * 9;
 ```
+#### DNA to RNA Conversion
+```javascript
+const DNAtoRNA = dna => dna.replace(/T/g, 'U');
+```
 #### Convert boolean values to strings 'Yes' or 'No'
 ````javascript
 const boolToWord = bool => bool ? 'Yes' : 'No';
