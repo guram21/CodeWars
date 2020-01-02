@@ -138,3 +138,7 @@ const DNAtoRNA = dna => dna.replace(/T/g, 'U');
 ````javascript
 const boolToWord = bool => bool ? 'Yes' : 'No';
 ````
+#### Super Duper Easy
+```javascript
+const problem = x => x === +x ? x * 50 + 6 : 'Error';
+```
