@@ -142,3 +142,7 @@ const boolToWord = bool => bool ? 'Yes' : 'No';
 ```javascript
 const problem = x => x === +x ? x * 50 + 6 : 'Error';
 ```
+#### Chuck Norris VII - True or False? (Beginner)
+````javascript
+const ifChuckSaysSo = () => !true;
+````
