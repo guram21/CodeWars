@@ -146,3 +146,7 @@ const problem = x => x === +x ? x * 50 + 6 : 'Error';
 ````javascript
 const ifChuckSaysSo = () => !true;
 ````
+#### Type of sum
+````javascript
+const typeOfSum = (a, b) => typeof (a + b);
+````
