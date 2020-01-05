@@ -150,3 +150,7 @@ const ifChuckSaysSo = () => !true;
 ````javascript
 const typeOfSum = (a, b) => typeof (a + b);
 ````
+#### Convert a Number to a String!
+````javascript
+const numberToString = (num) => String(num);
+````
