@@ -182,3 +182,7 @@ var booleanToString = b => b.toString();
 
 var booleanToString = b => `${b}`;
 ```
+#### Sum The Strings
+````javascript
+const sumStr = (a, b) => String(+a + +b);
+````
