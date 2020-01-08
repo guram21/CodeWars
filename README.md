@@ -182,3 +182,31 @@ var booleanToString = b => b.toString();
 
 var booleanToString = b => `${b}`;
 ```
+#### Convert a Boolean to a String
+```javascript
+var booleanToString = String;
+
+var booleanToString = b => String;
+
+var booleanToString = b => String(b);
+
+var booleanToString = b => ( b === true) ? "true" : "false";
+
+var booleanToString = b => ( b === false) ? "false" : "true";
+
+var booleanToString = b => b ? 'true' : 'false';
+
+var booleanToString = b => b ? 'false' : 'true';
+
+var booleanToString = b => b + '';
+
+var booleanToString = b => '' + b;
+
+var booleanToString = b => Boolean(b) + '';
+
+var booleanToString = b => '' + Boolean(b);
+
+var booleanToString = b => b.toString();
+
+var booleanToString = b => `${b}`;
+```
