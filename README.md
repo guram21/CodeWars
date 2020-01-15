@@ -186,3 +186,10 @@ var booleanToString = b => `${b}`;
 ````javascript
 const sumStr = (a, b) => String(+a + +b);
 ````
+
+#### Discover The Original Price
+````javascript
+var discoverOriginalPrice = (discountedPrice, salePercentage) => +(discountedPrice * 100 / (100 - salePercentage)).toFixed(2);
+
+var discoverOriginalPrice = (discountedPrice, salePercentage) => +(discountedPrice / (1 - salePercentage / 100)).toFixed(2);
+````
