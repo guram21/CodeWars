@@ -196,3 +196,7 @@ var discoverOriginalPrice = (discountedPrice, salePercentage) => +(discountedPri
 ```javascript
 const twoDecimalPlaces = n => +n.toFixed(2);
 ```
+#### How many times should I go?
+```javascript
+const howManyTimes = (annualPrice, individualPrice) => Math.ceil(annualPrice / individualPrice);
+```
