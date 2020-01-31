@@ -200,3 +200,7 @@ const twoDecimalPlaces = n => +n.toFixed(2);
 ```javascript
 const howManyTimes = (annualPrice, individualPrice) => Math.ceil(annualPrice / individualPrice);
 ```
+#### Return the closest number multiple of 10
+```javascript
+const closestMultiple10 = num => Math.round(num / 10) * 10;
+```
