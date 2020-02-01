@@ -204,3 +204,7 @@ const howManyTimes = (annualPrice, individualPrice) => Math.ceil(annualPrice / i
 ```javascript
 const closestMultiple10 = num => Math.round(num / 10) * 10;
 ```
+#### Count Odd Numbers below n
+```javascript
+const oddCount = n => Math.floor(n / 2);
+```
