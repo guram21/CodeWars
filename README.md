@@ -208,3 +208,7 @@ const closestMultiple10 = num => Math.round(num / 10) * 10;
 ```javascript
 const oddCount = n => Math.floor(n / 2);
 ```
+#### Century From Year
+```javascript
+const century = year => Math.ceil(year / 100);
+```
