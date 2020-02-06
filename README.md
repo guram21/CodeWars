@@ -212,3 +212,9 @@ const oddCount = n => Math.floor(n / 2);
 ```javascript
 const century = year => Math.ceil(year / 100);
 ```
+#### Area of a Square
+```javascript
+const squareArea = A => +Math.pow((2 * A / Math.PI), 2).toFixed(2);
+
+const squareArea = A => +((2 * A / Math.PI) ** 2).toFixed(2);
+```
