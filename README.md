@@ -218,3 +218,7 @@ const squareArea = A => +Math.pow((2 * A / Math.PI), 2).toFixed(2);
 
 const squareArea = A => +((2 * A / Math.PI) ** 2).toFixed(2);
 ```
+#### Keep up the hoop
+```javascript
+const hoopCount = n => n >= 10 ? 'Great, now move on to tricks': 'Keep at it until you get it';
+```
