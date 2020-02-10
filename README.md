@@ -222,3 +222,17 @@ const squareArea = A => +((2 * A / Math.PI) ** 2).toFixed(2);
 ```javascript
 const hoopCount = n => n >= 10 ? 'Great, now move on to tricks': 'Keep at it until you get it';
 ```
+#### Simple Comparison?
+```javascript
+var add = (a, b) => a == b;
+
+var add = (a, b) => +a == +b;
+
+var add = (a, b) => +a - +b == 0;
+
+var add = (a, b) => eval(a - b) == 0;
+
+var add = (a, b) => a + "" == b + "";
+
+var add = (a, b) => (`${a}`) == (`${b}`); 
+```
