@@ -236,3 +236,13 @@ var add = (a, b) => a + "" == b + "";
 
 var add = (a, b) => (`${a}`) == (`${b}`); 
 ```
+#### Is he gonna survive?
+```javascript
+var hero = (bullets, dragons) => bullets >= dragons * 2;
+
+var hero = (bullets, dragons) => dragons * 2 <= bullets;
+
+var hero = (bullets, dragons) => bullets / dragons >= 2;
+
+var hero = (bullets, dragons) => bullets >> 1 >= dragons;
+```
