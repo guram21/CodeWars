@@ -85,7 +85,7 @@ const litres = time => Math.floor(time * 0.5);
 #### Training JS #1: create your first JS function and print "Helloworld!"
 ````javascript
 function helloWorld() {
-  var str = 'Hello World!';
+  const str = 'Hello World!';
   console.log(str);
   return str;
 }
@@ -116,19 +116,19 @@ const iceBrickVolume = (radius, bottleLength, rimLength) => 2 * radius ** 2 * (b
 ```
 #### Simple multiplication
 ```javascript
-var simpleMultiplication = number => number * (8 + number % 2)
+const simpleMultiplication = number => number * (8 + number % 2)
 
-var simpleMultiplication = number => number * (8 + (number & 1));
+const simpleMultiplication = number => number * (8 + (number & 1));
 
-var simpleMultiplication = number => number * (number % 2 ? 9 : 8);
+const simpleMultiplication = number => number * (number % 2 ? 9 : 8);
 
-var simpleMultiplication = number => number * (8 + (number % 2 != 0));
+const simpleMultiplication = number => number * (8 + (number % 2 != 0));
 
-var simpleMultiplication = number => number % 2 ? number * 9 : number * 8;
+const simpleMultiplication = number => number % 2 ? number * 9 : number * 8;
 
-var simpleMultiplication = number => (number << 3) + (number & 1) * number;
+const simpleMultiplication = number => (number << 3) + (number & 1) * number;
 
-var simpleMultiplication = number => !(number % 2) ? number * 8 : number * 9;
+const simpleMultiplication = number => !(number % 2) ? number * 8 : number * 9;
 ```
 #### DNA to RNA Conversion
 ```javascript
@@ -156,31 +156,31 @@ const numberToString = (num) => String(num);
 ````
 #### Convert a Boolean to a String
 ```javascript
-var booleanToString = String;
+const booleanToString = String;
 
-var booleanToString = b => String;
+const booleanToString = b => String;
 
-var booleanToString = b => String(b);
+const booleanToString = b => String(b);
 
-var booleanToString = b => ( b === true) ? "true" : "false";
+const booleanToString = b => ( b === true) ? "true" : "false";
 
-var booleanToString = b => ( b === false) ? "false" : "true";
+const booleanToString = b => ( b === false) ? "false" : "true";
 
-var booleanToString = b => b ? 'true' : 'false';
+const booleanToString = b => b ? 'true' : 'false';
 
-var booleanToString = b => b ? 'false' : 'true';
+const booleanToString = b => b ? 'false' : 'true';
 
-var booleanToString = b => b + '';
+const booleanToString = b => b + '';
 
-var booleanToString = b => '' + b;
+const booleanToString = b => '' + b;
 
-var booleanToString = b => Boolean(b) + '';
+const booleanToString = b => Boolean(b) + '';
 
-var booleanToString = b => '' + Boolean(b);
+const booleanToString = b => '' + Boolean(b);
 
-var booleanToString = b => b.toString();
+const booleanToString = b => b.toString();
 
-var booleanToString = b => `${b}`;
+const booleanToString = b => `${b}`;
 ```
 #### Sum The Strings
 ````javascript
@@ -188,9 +188,9 @@ const sumStr = (a, b) => String(+a + +b);
 ````
 #### Discover The Original Price
 ````javascript
-var discoverOriginalPrice = (discountedPrice, salePercentage) => +(discountedPrice * 100 / (100 - salePercentage)).toFixed(2);
+const discoverOriginalPrice = (discountedPrice, salePercentage) => +(discountedPrice * 100 / (100 - salePercentage)).toFixed(2);
 
-var discoverOriginalPrice = (discountedPrice, salePercentage) => +(discountedPrice / (1 - salePercentage / 100)).toFixed(2);
+const discoverOriginalPrice = (discountedPrice, salePercentage) => +(discountedPrice / (1 - salePercentage / 100)).toFixed(2);
 ````
 #### Formatting decimal places #0
 ```javascript
@@ -224,43 +224,43 @@ const hoopCount = n => n >= 10 ? 'Great, now move on to tricks': 'Keep at it unt
 ```
 #### Simple Comparison?
 ```javascript
-var add = (a, b) => a == b;
+const add = (a, b) => a == b;
 
-var add = (a, b) => +a == +b;
+const add = (a, b) => +a == +b;
 
-var add = (a, b) => +a - +b == 0;
+const add = (a, b) => +a - +b == 0;
 
-var add = (a, b) => eval(a - b) == 0;
+const add = (a, b) => eval(a - b) == 0;
 
-var add = (a, b) => a + "" == b + "";
+const add = (a, b) => a + "" == b + "";
 
-var add = (a, b) => (`${a}`) == (`${b}`); 
+const add = (a, b) => (`${a}`) == (`${b}`); 
 ```
 #### Is he gonna survive?
 ```javascript
-var hero = (bullets, dragons) => bullets >= dragons * 2;
+const hero = (bullets, dragons) => bullets >= dragons * 2;
 
-var hero = (bullets, dragons) => dragons * 2 <= bullets;
+const hero = (bullets, dragons) => dragons * 2 <= bullets;
 
-var hero = (bullets, dragons) => bullets / dragons >= 2;
+const hero = (bullets, dragons) => bullets / dragons >= 2;
 
-var hero = (bullets, dragons) => bullets >> 1 >= dragons;
+const hero = (bullets, dragons) => bullets >> 1 >= dragons;
 ```
 #### Even or Odd
 ```javascript
-var even_or_odd = number =>  number % 2 ? 'Odd' : 'Even';
+const even_or_odd = number =>  number % 2 ? 'Odd' : 'Even';
 
-var even_or_odd = number =>  number & 1 ? 'Odd' : 'Even';
+const even_or_odd = number =>  number & 1 ? 'Odd' : 'Even';
 
-var even_or_odd = number => !(number % 2) ? 'Even' : 'Odd';
+const even_or_odd = number => !(number % 2) ? 'Even' : 'Odd';
 
-var even_or_odd = number => Math.abs(number) % 2 ? "Odd" : "Even";
+const even_or_odd = number => Math.abs(number) % 2 ? "Odd" : "Even";
 
-var even_or_odd = number => ['Even', 'Odd'][number % 2];
+const even_or_odd = number => ['Even', 'Odd'][number % 2];
 
-var even_or_odd = number => ['Even', 'Odd'][number & 1];
+const even_or_odd = number => ['Even', 'Odd'][number & 1];
 
-var even_or_odd = number => ['Even', 'Odd'][!(number % 2)];
+const even_or_odd = number => ['Even', 'Odd'][!(number % 2)];
 
-var even_or_odd = number => ["Even", "Odd"][Math.abs(number) % 2];
+const even_or_odd = number => ["Even", "Odd"][Math.abs(number) % 2];
 ```
