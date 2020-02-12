@@ -246,3 +246,21 @@ var hero = (bullets, dragons) => bullets / dragons >= 2;
 
 var hero = (bullets, dragons) => bullets >> 1 >= dragons;
 ```
+#### Even or Odd
+```javascript
+var even_or_odd = number =>  number % 2 ? 'Odd' : 'Even';
+
+var even_or_odd = number =>  number & 1 ? 'Odd' : 'Even';
+
+var even_or_odd = number => !(number % 2) ? 'Even' : 'Odd';
+
+var even_or_odd = number => Math.abs(number) % 2 ? "Odd" : "Even";
+
+var even_or_odd = number => ['Even', 'Odd'][number % 2];
+
+var even_or_odd = number => ['Even', 'Odd'][number & 1];
+
+var even_or_odd = number => ['Even', 'Odd'][!(number % 2)];
+
+var even_or_odd = number => ["Even", "Odd"][Math.abs(number) % 2];
+```
