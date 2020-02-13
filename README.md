@@ -264,3 +264,19 @@ const even_or_odd = number => ['Even', 'Odd'][!(number % 2)];
 
 const even_or_odd = number => ["Even", "Odd"][Math.abs(number) % 2];
 ```
+#### Calculate BMI
+```javascript
+function bmi(weight, height) {
+  let bmi = weight / height ** 2;
+  if (bmi <= 18.5) return 'Underweight';
+  if (bmi <= 25.0) return 'Normal';
+  if (bmi <= 30.0) return 'Overweight';
+  if (bmi > 30) return 'Obese';
+}
+
+const bmi = (weight, height) => (weight = weight / height / height) > 30 ? 'Obese' : weight > 25 ? 'Overweight' : weight > 18.5 ? 'Normal' : 'Underweight';
+
+const bmi = (weight, height, bmi = weight / height ** 2) => bmi <= 18.5 ? "Underweight" :
+                                                            bmi <= 25 ? "Normal" :
+                                                            bmi <= 30 ? "Overweight" : "Obese";
+```
