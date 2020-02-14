@@ -331,3 +331,17 @@ function chromosomeCheck(sperm) {
   return sperm.search('Y') === -1 ? text('daughter') : text('son');
 }
 ```
+#### Alan Partridge II - Apple Turnover
+```javascript
+const apple = x => +x * +x > 1000
+? 'It\'s hotter than the sun!!'
+: 'Help yourself to a honeycomb Yorkie for the glovebox.'
+
+const apple = x => x ** 2 > 1000 
+? 'It\'s hotter than the sun!!' 
+: 'Help yourself to a honeycomb Yorkie for the glovebox.' ;
+
+const apple = x => Math.pow(x, 2) > 1000 
+? "It's hotter than the sun!!" 
+: "Help yourself to a honeycomb Yorkie for the glovebox.";
+```
