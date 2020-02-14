@@ -280,3 +280,9 @@ const bmi = (weight, height, bmi = weight / height ** 2) => bmi <= 18.5 ? "Under
                                                             bmi <= 25 ? "Normal" :
                                                             bmi <= 30 ? "Overweight" : "Obese";
 ```
+#### What's the real floor?
+```javascript
+const getRealFloor = n => n <= 0 ? n : n < 13 ? n - 1 : n - 2;
+
+const getRealFloor = n => n <= 0 ? n : n - (n >= 13 ? 2 : 1);
+```
