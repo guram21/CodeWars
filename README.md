@@ -286,3 +286,48 @@ const getRealFloor = n => n <= 0 ? n : n < 13 ? n - 1 : n - 2;
 
 const getRealFloor = n => n <= 0 ? n : n - (n >= 13 ? 2 : 1);
 ```
+#### Determine offspring sex based on genes XX and XY chromosomes
+```javascript
+const chromosomeCheck = sperm => sperm == 'XY' 
+? "Congratulations! You're going to have a son."
+: "Congratulations! You're going to have a daughter.";
+
+const chromosomeCheck = sperm => sperm.indexOf('Y') >= 0
+? "Congratulations! You're going to have a son."
+: "Congratulations! You're going to have a daughter.";
+
+const chromosomeCheck = sperm => sperm.includes("Y")
+? "Congratulations! You're going to have a son."
+: "Congratulations! You're going to have a daughter.";
+
+const chromosomeCheck = sperm => sperm.match(/[Y]/gi) 
+? "Congratulations! You're going to have a son." 
+: "Congratulations! You're going to have a daughter.";
+
+const chromosomeCheck = sperm => {
+  let kid = sperm.includes('Y') ? 'son' : 'daughter'
+  return `Congratulations! You're going to have a ${kid}.`
+}
+
+const chromosomeCheck = sperm => `Congratulations! You're going to have a ${sperm.endsWith('X') ? 'daughter' : 'son'}.`;
+
+const chromosomeCheck = sperm => "Congratulations! You're going to have a " + (~sperm.indexOf('Y')? "son." : "daughter.");
+
+const chromosomeCheck = sperm => `Congratulations! You're going to have a ${sperm === 'XY' ? 'son' : 'daughter'}.`;
+
+const chromosomeCheck = sperm => "Congratulations! You're going to have a " + (sperm === 'XY' ? 'son' : 'daughter') + '.';
+
+const chromosomeCheck = sperm => `Congratulations! You\'re going to have a ${sperm.includes('Y') ? 'son' : 'daughter'}.`;
+
+function chromosomeCheck(sperm) {
+  const son = 'Congratulations! You\'re going to have a son.';
+  const daughter = 'Congratulations! You\'re going to have a daughter.'
+  
+  return sperm.includes('Y') ? son: daughter; 
+}
+
+function chromosomeCheck(sperm) {
+  const text = a => `Congratulations! You're going to have a ${a}.`
+  return sperm.search('Y') === -1 ? text('daughter') : text('son');
+}
+```
