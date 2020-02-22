@@ -345,3 +345,60 @@ const apple = x => Math.pow(x, 2) > 1000
 ? "It's hotter than the sun!!" 
 : "Help yourself to a honeycomb Yorkie for the glovebox.";
 ```
+#### Sleigh Authentication
+```javascript
+function Sleigh() {}
+
+Sleigh.prototype.authenticate = function(name, password) {
+  return name == "Santa Claus" && password == "Ho Ho Ho!";
+};
+
+function Sleigh() {}
+
+Sleigh.prototype.authenticate = function(name, password) {
+  if (name === "Santa Claus" && password === "Ho Ho Ho!") return true
+  return false
+};
+
+function Sleigh() {}
+
+Sleigh.prototype.authenticate = function(name, password) {
+  return (name === "Santa Claus" && password === "Ho Ho Ho!")? true : false;
+};
+
+function Sleigh() {
+  this.name = "Santa Claus";
+  this.password = "Ho Ho Ho!";
+}
+
+Sleigh.prototype.authenticate = function(name, password) {
+  return this.name == name && this.password == password;
+};
+
+class Sleigh {
+   authenticate(name, password) {
+       return name == "Santa Claus" && password == "Ho Ho Ho!";
+   }
+}
+
+class Sleigh {
+  constructor () {
+    this.users = {
+      'Santa Claus': "Ho Ho Ho!"
+    }
+  }
+  authenticate (name, password) {
+    return this.users[name] === password
+  }
+}
+
+function Sleigh() {}
+
+Sleigh.prototype.authenticate = function (name, password) {
+  if (name !== 'Santa Claus' || password !== 'Ho Ho Ho!') {
+    return false;
+  } else {
+    return true;
+  }
+};
+```
