@@ -402,3 +402,13 @@ Sleigh.prototype.authenticate = function (name, password) {
   }
 };
 ```
+#### Is n divisible by x and y?
+```javascript
+const isDivisible = (n, x, y) => n % x === 0 && n % y === 0;
+
+const isDivisible = (n, x, y) => (n % x) + (n % y) === 0;
+
+const isDivisible = (n, x, y) => !(n % x || n % y);
+
+const isDivisible = (n, x, y) => !(n % x | n % y);
+```
