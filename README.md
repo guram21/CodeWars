@@ -412,3 +412,13 @@ const isDivisible = (n, x, y) => !(n % x || n % y);
 
 const isDivisible = (n, x, y) => !(n % x | n % y);
 ```
+#### Rock Paper Scissors!
+```javascript
+const rps = (p1, p2) => {
+  if ((p1 === 'rock' && p2 === 'scissors') || (p1 === 'scissors' && p2 === 'paper') || (p1 === 'paper' && p2 === 'rock')) return 'Player 1 won!';
+  if ((p1 === 'scissors' && p2 === 'rock') || (p1 === 'paper' && p2 === 'scissors') || (p1 === 'rock' && p2 === 'paper')) return 'Player 2 won!';
+  return 'Draw!';
+};
+
+const rps = (p1, p2) => p1 === p2 ? 'Draw!' : `Player ${/rockscissors|scissorspaper|paperrock/.test(p1 + p2) ? 1 : 2} won!`;
+```
