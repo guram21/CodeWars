@@ -426,3 +426,15 @@ const rps = (p1, p2) => p1 === p2 ? 'Draw!' : `Player ${/rockscissors|scissorspa
 ```javascript
 const isDivideBy = (number, a, b) => number % a === 0 && number % b === 0;
 ```
+#### Student's Final Grade
+```javascript
+function finalGrade (exam, projects) {
+  if (exam > 90 || projects > 10)  return 100
+  if (exam > 75 && projects >= 5)  return 90
+  if (exam > 50 && projects >= 2)  return 75
+  return 0
+};
+
+const final_Grade = (exam, projects) => exam > 90 || projects > 10 ? 100 : exam > 75 && projects > 4 ? 90 : exam > 50 && projects > 1 ? 75 : 0;
+```
+
