@@ -437,4 +437,15 @@ function finalGrade (exam, projects) {
 
 const final_Grade = (exam, projects) => exam > 90 || projects > 10 ? 100 : exam > 75 && projects > 4 ? 90 : exam > 50 && projects > 1 ? 75 : 0;
 ```
+#### L1: Set Alarm
+```javascript
+function setAlarm(employed, vacation) {
+if (employed === true && vacation === false) return true
+return false
+};
+
+const setAlarm = (employed, vacation) => employed === true && vacation === false ? true :false;
+
+const setAlarm = (employed, vacation) => employed && !vacation;
+```
 
