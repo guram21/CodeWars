@@ -448,4 +448,12 @@ const setAlarm = (employed, vacation) => employed === true && vacation === false
 
 const setAlarm = (employed, vacation) => employed && !vacation;
 ```
+#### Is this a triangle?
+```javascript
+const isTriangle = (a,b,c) => a + b > c && a + c > b && c + b > a;
+
+const isTriangle = (a,b,c) => Math.max(a,b,c) < (a + b + c) / 2;
+
+const isTriangle = (a, b, c) => (a = [a, b, c].sort())[0] + a[1] > a[2];
+```
 
