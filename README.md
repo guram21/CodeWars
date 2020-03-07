@@ -467,5 +467,17 @@ function getAges(s, d){
   return s < 0 || d < 0 || s < d ? null : [(s + d) / 2, (s - d) / 2]
 };
 ```
+#### Do I get a bonus?
+```javascript
+const bonusTime = (salary, bonus) => `£${salary * (bonus ? 10 : 1)}`;
+
+const bonusTime = (salary, bonus) => '£' + salary * (bonus ? 10 : 1);
+
+const bonusTime = (salary, bonus) => '£' + (bonus ? salary * 10 : salary);
+
+const bonusTime = (salary, bonus) => bonus ? `£${salary * 10}` : `£${salary}`;
+
+const bonusTime = (salary, bonus) => bonus ? ('£'+ salary +'0') : ('£'+salary);
+```
 
 
