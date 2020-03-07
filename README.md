@@ -479,5 +479,11 @@ const bonusTime = (salary, bonus) => bonus ? `£${salary * 10}` : `£${salary}`;
 
 const bonusTime = (salary, bonus) => bonus ? ('£'+ salary +'0') : ('£'+salary);
 ```
+#### 101 Dalmatians - squash the bugs, not the dogs!
+```javascript
+const dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIANS!!!"];
+
+const howManyDalmatians = number  => number <= 10 ? dogs[0] : number <= 50 ? dogs[1] : number <= 100 ? dogs[2] : dogs[3];
+```
 
 
