@@ -456,4 +456,16 @@ const isTriangle = (a,b,c) => Math.max(a,b,c) < (a + b + c) / 2;
 
 const isTriangle = (a, b, c) => (a = [a, b, c].sort())[0] + a[1] > a[2];
 ```
+#### Calculate Two People's Individual Ages
+```javascript
+function getAges(s, d){
+  if (s < 0 || d < 0 || s < d) return null
+  return [(s + d) / 2, (s - d) / 2];
+};
+
+function getAges(s, d){
+  return s < 0 || d < 0 || s < d ? null : [(s + d) / 2, (s - d) / 2]
+};
+```
+
 
