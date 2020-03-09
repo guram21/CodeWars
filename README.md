@@ -485,5 +485,10 @@ const dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!"
 
 const howManyDalmatians = number  => number <= 10 ? dogs[0] : number <= 50 ? dogs[1] : number <= 100 ? dogs[2] : dogs[3];
 ```
+#### Training JS #7: if..else and ternary operator
+```javascript
+const saleHotdogs = n => n < 5 ? n * 100 : n >= 5 && n < 10 ? n * 95 : n * 90;
 
+const saleHotdogs = n => n * (n < 5 ? 100 : n < 10 ? 95 : 90);
+```
 
