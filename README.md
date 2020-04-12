@@ -30,7 +30,7 @@ function howMuchILoveYou(n) {
 ````
 #### Complementary DNA
 ````javascript
-function DNAStrand(dna) {
+const DNAStrand = dna => {
   let r = '';
   for (let i = 0; i < dna.length; i++) {
     if (dna[i] === 'A') r += 'T';
@@ -39,7 +39,23 @@ function DNAStrand(dna) {
     if (dna[i] === 'C') r += 'G';
   }
   return r;
-}
+};
+
+const pairs = { A: 'T', T: 'A', C: 'G', G: 'C' };
+const DNAStrand = dna => dna.replace(/./g, c => pairs[c]);
+
+const DNAStrand = dna => {
+  return dna.replace(/./g, function(c) {
+    return DNAStrand.pairs[c];
+  });
+};
+
+DNAStrand.pairs = {
+  A: 'T',
+  T: 'A',
+  C: 'G',
+  G: 'C'
+};
 ````
 #### Count of positives / sum of negatives
 ````javascript
