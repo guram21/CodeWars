@@ -27,7 +27,7 @@ function howMuchILoveYou(n) {
   const fl = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all'];
   return fl[(n - 1) % 6]
 }
-````
+```
 #### Complementary DNA
 ````javascript
 const DNAStrand = dna => {
@@ -507,4 +507,16 @@ const saleHotdogs = n => n < 5 ? n * 100 : n >= 5 && n < 10 ? n * 95 : n * 90;
 
 const saleHotdogs = n => n * (n < 5 ? 100 : n < 10 ? 95 : 90);
 ```
-
+#### Be Concise I - The Ternary Operator
+```javascript
+const describeAge = age =>
+  `You're a(n) ${
+    age <= 12
+      ? 'kid'
+      : age >= 13 && age <= 17
+      ? 'teenager'
+      : age >= 18 && age <= 64
+      ? 'adult'
+      : 'elderly'
+  }`;
+```
