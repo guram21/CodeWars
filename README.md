@@ -5,31 +5,35 @@ const multiply = (a, b) => a * b;
 ```
 #### Draw stairs
 ```javascript
-function drawStairs(n) {
-  let s = '';
-  for (let i = 1; i <= n; i++) {
-    s += i === n ? 'I' : 'I\n' + ' '.repeat(i)
-  }
-  return s;
-}
+
 ```
 #### A wolf in sheep's clothing
 ```javascript
-function warnTheSheep(q) {
+const warnTheSheep = q => {
   const l = q.length,
     w = q.indexOf('wolf');
-  return l === w + 1 ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${l - 1 - w}! You are about to be eaten by a wolf!`
-}
+  return l === w + 1
+    ? 'Pls go away and stop eating my sheep'
+    : `Oi! Sheep number ${l - 1 - w}! You are about to be eaten by a wolf!`;
+};
 ```
-#### I love you, a little , a lot, passionately ... not at all
-````javascript
-function howMuchILoveYou(n) {
-  const fl = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all'];
-  return fl[(n - 1) % 6]
-}
+#### I love you, a little, a lot, passionately ... not at all
+```javascript
+const howMuchILoveYou = n => {
+  const fl = [
+    'I love you',
+    'a little',
+    'a lot',
+    'passionately',
+    'madly',
+    'not at all'
+  ];
+  return fl[(n - 1) % 6];
+};
 ```
 #### Complementary DNA
-````javascript
+```javascript
+// Solution 1
 const DNAStrand = dna => {
   let r = '';
   for (let i = 0; i < dna.length; i++) {
@@ -40,10 +44,10 @@ const DNAStrand = dna => {
   }
   return r;
 };
-
+// Solution 2
 const pairs = { A: 'T', T: 'A', C: 'G', G: 'C' };
 const DNAStrand = dna => dna.replace(/./g, c => pairs[c]);
-
+// Solution 3
 const DNAStrand = dna => {
   return dna.replace(/./g, function(c) {
     return DNAStrand.pairs[c];
@@ -56,56 +60,56 @@ DNAStrand.pairs = {
   C: 'G',
   G: 'C'
 };
-````
+```
 #### Count of positives / sum of negatives
-````javascript
-function countPositivesSumNegatives(arr) {
+```javascript
+const countPositivesSumNegatives = arr => {
   if (arr === null || arr.length === 0) return [];
   let countPos = 0,
-    summNeg = 0;
+    sumNeg = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0) {
-      countPos++;
-    } else {
-      summNeg += arr[i];
-    }
+    arr[i] > 0 ? countPos++ : (sumNeg += arr[i]);
   }
-  return [countPos, summNeg];
-}
-````
+  return [countPos, sumNeg];
+};
+```
 #### Sum of differences in array
-````javascript
-function sumOfDifferences(arr) {
+```javascript
+// Solution 1
+const sumOfDifferences = arr =>
+  arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
+// Solution 2
+const sumOfDifferences = arr => {
   const sorted = arr.sort((a, b) => b - a);
-  let summ = 0;
+  let sum = 0;
   for (let i = 0; i < sorted.length - 1; i++) {
-    summ += sorted[i] - sorted[i + 1];
+    sum += sorted[i] - sorted[i + 1];
   }
-  return summ;
-}
-````
+  return sum;
+};
+```
 #### Generate range of integers
-````javascript
-function generateRange(min, max, step){
+```javascript
+const generateRange = (min, max, step) => {
   const arr = [];
-  for (let i = min; i <= max; i += step){
+  for (let i = min; i <= max; i += step) {
     arr.push(i);
   }
   return arr;
-}
-````
+};
+```
 #### Keep Hydrated!
 ```javascript
 const litres = time => Math.floor(time * 0.5);
 ```
 #### Training JS #1: create your first JS function and print "Helloworld!"
-````javascript
+```javascript
 function helloWorld() {
   const str = 'Hello World!';
   console.log(str);
   return str;
 }
-````
+```
 #### Function 1 - hello world
 ```javascript
 const greet = () => 'hello world!';
@@ -115,106 +119,121 @@ const greet = () => 'hello world!';
 const past = (h, m, s) => (h * 3600 + m * 60 + s) * 1000;
 ```
 #### Third Angle of a Triangle
-````javascript
+```javascript
 const otherAngle = (a, b) => 180 - (a + b);
-````
+```
 #### Sum of angles
-````javascript
+```javascript
 const angle = n => 180 * (n - 2);
-````
+```
 #### Breaking chocolate problem
-````javascript
-const breakChocolate = (n,m) => n * m > 0 ? n * m - 1 : 0;
-````
+```javascript
+const breakChocolate = (n, m) => (n * m > 0 ? n * m - 1 : 0);
+```
 #### For Twins: 2. Math operations
 ```javascript
-const iceBrickVolume = (radius, bottleLength, rimLength) => 2 * radius ** 2 * (bottleLength - rimLength);
+const iceBrickVolume = (radius, bottleLength, rimLength) =>
+  2 * radius ** 2 * (bottleLength - rimLength);
 ```
 #### Simple multiplication
 ```javascript
-const simpleMultiplication = number => number * (8 + number % 2)
-
+// Solution 1
+const simpleMultiplication = number => number * (8 + (number % 2));
+// Solution 2
 const simpleMultiplication = number => number * (8 + (number & 1));
-
+// Solution 3
 const simpleMultiplication = number => number * (number % 2 ? 9 : 8);
-
+// Solution 4
 const simpleMultiplication = number => number * (8 + (number % 2 != 0));
-
-const simpleMultiplication = number => number % 2 ? number * 9 : number * 8;
-
+// Solution 5
+const simpleMultiplication = number => (number % 2 ? number * 9 : number * 8);
+// Solution 6
 const simpleMultiplication = number => (number << 3) + (number & 1) * number;
-
-const simpleMultiplication = number => !(number % 2) ? number * 8 : number * 9;
+// Solution 7
+const simpleMultiplication = number =>
+  !(number % 2) ? number * 8 : number * 9;
 ```
 #### DNA to RNA Conversion
 ```javascript
 const DNAtoRNA = dna => dna.replace(/T/g, 'U');
 ```
 #### Convert boolean values to strings 'Yes' or 'No'
-````javascript
-const boolToWord = bool => bool ? 'Yes' : 'No';
-````
+```javascript
+const boolToWord = bool => (bool ? 'Yes' : 'No');
+```
 #### Super Duper Easy
 ```javascript
-const problem = x => x === +x ? x * 50 + 6 : 'Error';
+const problem = x => (x === +x ? x * 50 + 6 : 'Error');
 ```
 #### Chuck Norris VII - True or False? (Beginner)
-````javascript
+```javascript
 const ifChuckSaysSo = () => !true;
-````
+```
 #### Type of sum
-````javascript
+```javascript
 const typeOfSum = (a, b) => typeof (a + b);
-````
+```
 #### Convert a Number to a String!
-````javascript
-const numberToString = (num) => String(num);
-````
+```javascript
+// Solution 1
+var numberToString = num => num.toString();
+// Solution 2
+var numberToString = num => String(num);
+// Solution 3
+var numberToString = num => num + '';
+// Solution 4
+var numberToString = num => `${num}`;
+```
 #### Convert a Boolean to a String
 ```javascript
+// Solution 1
 const booleanToString = String;
-
+// Solution 2
 const booleanToString = b => String;
-
-const booleanToString = b => String(b);
-
-const booleanToString = b => ( b === true) ? "true" : "false";
-
-const booleanToString = b => ( b === false) ? "false" : "true";
-
-const booleanToString = b => b ? 'true' : 'false';
-
-const booleanToString = b => b ? 'false' : 'true';
-
-const booleanToString = b => b + '';
-
-const booleanToString = b => '' + b;
-
-const booleanToString = b => Boolean(b) + '';
-
-const booleanToString = b => '' + Boolean(b);
-
-const booleanToString = b => b.toString();
-
+// Solution 3
 const booleanToString = b => `${b}`;
+// Solution 4
+const booleanToString = b => b + '';
+// Solution 5
+const booleanToString = b => '' + b;
+// Solution 6
+const booleanToString = b => String(b);
+// Solution 7
+const booleanToString = b => b.toString();
+// Solution 8
+const booleanToString = b => Boolean(b) + '';
+// Solution 9
+const booleanToString = b => '' + Boolean(b);
+// Solution 10
+const booleanToString = b => (b ? 'true' : 'false');
+// Solution 11
+const booleanToString = b => (b ? 'false' : 'true');
+// Solution 12
+const booleanToString = b => (b === true ? 'true' : 'false');
+// Solution 13
+const booleanToString = b => (b === false ? 'false' : 'true');
 ```
 #### Sum The Strings
-````javascript
+```javascript
 const sumStr = (a, b) => String(+a + +b);
-````
+```
 #### Discover The Original Price
-````javascript
-const discoverOriginalPrice = (discountedPrice, salePercentage) => +(discountedPrice * 100 / (100 - salePercentage)).toFixed(2);
-
-const discoverOriginalPrice = (discountedPrice, salePercentage) => +(discountedPrice / (1 - salePercentage / 100)).toFixed(2);
-````
+```javascript
+//Solution 1
+const discoverOriginalPrice = (discountedPrice, salePercentage) =>
+  +((discountedPrice * 100) / (100 - salePercentage)).toFixed(2);
+//Solution 2
+const discoverOriginalPrice = (discountedPrice, salePercentage) =>
+  +(discountedPrice / (1 - salePercentage / 100)).toFixed(2);
+```
 #### Formatting decimal places #0
 ```javascript
 const twoDecimalPlaces = n => +n.toFixed(2);
 ```
 #### How many times should I go?
 ```javascript
-const howManyTimes = (annualPrice, individualPrice) => Math.ceil(annualPrice / individualPrice);
+const howManyTimes = (annualPrice, individualPrice) =>
+  Math.ceil(annualPrice / individualPrice);
 ```
 #### Return the closest number multiple of 10
 ```javascript
@@ -230,213 +249,266 @@ const century = year => Math.ceil(year / 100);
 ```
 #### Area of a Square
 ```javascript
-const squareArea = A => +Math.pow((2 * A / Math.PI), 2).toFixed(2);
-
-const squareArea = A => +((2 * A / Math.PI) ** 2).toFixed(2);
+// Solution 1
+const squareArea = A => +(((2 * A) / Math.PI) ** 2).toFixed(2);
+// Solution 2
+const squareArea = A => +Math.pow((2 * A) / Math.PI, 2).toFixed(2);
 ```
 #### Keep up the hoop
 ```javascript
-const hoopCount = n => n >= 10 ? 'Great, now move on to tricks': 'Keep at it until you get it';
+const hoopCount = n => n >= 10 ? 'Great, now move on to tricks' : 'Keep at it until you get it';
 ```
 #### Simple Comparison?
 ```javascript
+// Solution 1
 const add = (a, b) => a == b;
-
+// Solution 2
 const add = (a, b) => +a == +b;
-
+// Solution 3
 const add = (a, b) => +a - +b == 0;
-
+// Solution 4
 const add = (a, b) => eval(a - b) == 0;
-
-const add = (a, b) => a + "" == b + "";
-
-const add = (a, b) => (`${a}`) == (`${b}`); 
+// Solution 5
+const add = (a, b) => a + '' == b + '';
+// Solution 6
+const add = (a, b) => `${a}` == `${b}`;
 ```
 #### Is he gonna survive?
 ```javascript
+// Solution 1
 const hero = (bullets, dragons) => bullets >= dragons * 2;
-
+// Solution 2
 const hero = (bullets, dragons) => dragons * 2 <= bullets;
-
+// Solution 3
 const hero = (bullets, dragons) => bullets / dragons >= 2;
-
+// Solution 4
 const hero = (bullets, dragons) => bullets >> 1 >= dragons;
 ```
 #### Even or Odd
 ```javascript
-const even_or_odd = number =>  number % 2 ? 'Odd' : 'Even';
-
-const even_or_odd = number =>  number & 1 ? 'Odd' : 'Even';
-
-const even_or_odd = number => !(number % 2) ? 'Even' : 'Odd';
-
-const even_or_odd = number => Math.abs(number) % 2 ? "Odd" : "Even";
-
+// Solution 1
 const even_or_odd = number => ['Even', 'Odd'][number % 2];
-
+// Solution 2
 const even_or_odd = number => ['Even', 'Odd'][number & 1];
-
+// Solution 3
+const even_or_odd = number => (number % 2 ? 'Odd' : 'Even');
+// Solution 4
+const even_or_odd = number => (number & 1 ? 'Odd' : 'Even');
+// Solution 5
 const even_or_odd = number => ['Even', 'Odd'][!(number % 2)];
-
-const even_or_odd = number => ["Even", "Odd"][Math.abs(number) % 2];
+// Solution 6
+const even_or_odd = number => (!(number % 2) ? 'Even' : 'Odd');
+// Solution 7
+const even_or_odd = number => ['Even', 'Odd'][Math.abs(number) % 2];
+// Solution 8
+const even_or_odd = number => (Math.abs(number) % 2 ? 'Odd' : 'Even');
 ```
 #### Calculate BMI
 ```javascript
-function bmi(weight, height) {
+// Solution 1
+const bmi = (weight, height) => {
   let bmi = weight / height ** 2;
   if (bmi <= 18.5) return 'Underweight';
   if (bmi <= 25.0) return 'Normal';
   if (bmi <= 30.0) return 'Overweight';
   if (bmi > 30) return 'Obese';
-}
-
-const bmi = (weight, height) => (weight = weight / height / height) > 30 ? 'Obese' : weight > 25 ? 'Overweight' : weight > 18.5 ? 'Normal' : 'Underweight';
-
-const bmi = (weight, height, bmi = weight / height ** 2) => bmi <= 18.5 ? "Underweight" :
-                                                            bmi <= 25 ? "Normal" :
-                                                            bmi <= 30 ? "Overweight" : "Obese";
+};
+// Solution 2
+const bmi = (weight, height) =>
+  (weight = weight / height / height) > 30
+    ? 'Obese'
+    : weight > 25
+    ? 'Overweight'
+    : weight > 18.5
+    ? 'Normal'
+    : 'Underweight';
+// Solution 3
+const bmi = (weight, height, bmi = weight / height ** 2) =>
+  bmi <= 18.5
+    ? 'Underweight'
+    : bmi <= 25
+    ? 'Normal'
+    : bmi <= 30
+    ? 'Overweight'
+    : 'Obese';
 ```
 #### What's the real floor?
 ```javascript
-const getRealFloor = n => n <= 0 ? n : n < 13 ? n - 1 : n - 2;
-
-const getRealFloor = n => n <= 0 ? n : n - (n >= 13 ? 2 : 1);
+// Solution 1
+const getRealFloor = n => (n <= 0 ? n : n - (n >= 13 ? 2 : 1));
+// Solution 2
+const getRealFloor = n => (n <= 0 ? n : n < 13 ? n - 1 : n - 2);
 ```
 #### Determine offspring sex based on genes XX and XY chromosomes
 ```javascript
-const chromosomeCheck = sperm => sperm == 'XY' 
-? "Congratulations! You're going to have a son."
-: "Congratulations! You're going to have a daughter.";
-
-const chromosomeCheck = sperm => sperm.indexOf('Y') >= 0
-? "Congratulations! You're going to have a son."
-: "Congratulations! You're going to have a daughter.";
-
-const chromosomeCheck = sperm => sperm.includes("Y")
-? "Congratulations! You're going to have a son."
-: "Congratulations! You're going to have a daughter.";
-
-const chromosomeCheck = sperm => sperm.match(/[Y]/gi) 
-? "Congratulations! You're going to have a son." 
-: "Congratulations! You're going to have a daughter.";
-
+// Solution 1
+const chromosomeCheck = sperm =>
+  sperm == 'XY'
+    ? "Congratulations! You're going to have a son."
+    : "Congratulations! You're going to have a daughter.";
+// Solution 2
+const chromosomeCheck = sperm =>
+  sperm.indexOf('Y') >= 0
+    ? "Congratulations! You're going to have a son."
+    : "Congratulations! You're going to have a daughter.";
+// Solution 3
+const chromosomeCheck = sperm =>
+  sperm.includes('Y')
+    ? "Congratulations! You're going to have a son."
+    : "Congratulations! You're going to have a daughter.";
+// Solution 4
+const chromosomeCheck = sperm =>
+  sperm.match(/[Y]/gi)
+    ? "Congratulations! You're going to have a son."
+    : "Congratulations! You're going to have a daughter.";
+// Solution 5
 const chromosomeCheck = sperm => {
-  let kid = sperm.includes('Y') ? 'son' : 'daughter'
-  return `Congratulations! You're going to have a ${kid}.`
-}
-
-const chromosomeCheck = sperm => `Congratulations! You're going to have a ${sperm.endsWith('X') ? 'daughter' : 'son'}.`;
-
-const chromosomeCheck = sperm => "Congratulations! You're going to have a " + (~sperm.indexOf('Y')? "son." : "daughter.");
-
-const chromosomeCheck = sperm => `Congratulations! You're going to have a ${sperm === 'XY' ? 'son' : 'daughter'}.`;
-
-const chromosomeCheck = sperm => "Congratulations! You're going to have a " + (sperm === 'XY' ? 'son' : 'daughter') + '.';
-
-const chromosomeCheck = sperm => `Congratulations! You\'re going to have a ${sperm.includes('Y') ? 'son' : 'daughter'}.`;
-
-function chromosomeCheck(sperm) {
-  const son = 'Congratulations! You\'re going to have a son.';
-  const daughter = 'Congratulations! You\'re going to have a daughter.'
-  
-  return sperm.includes('Y') ? son: daughter; 
-}
-
-function chromosomeCheck(sperm) {
-  const text = a => `Congratulations! You're going to have a ${a}.`
+  let kid = sperm.includes('Y') ? 'son' : 'daughter';
+  return `Congratulations! You're going to have a ${kid}.`;
+};
+// Solution 6
+const chromosomeCheck = sperm =>
+  `Congratulations! You're going to have a ${
+    sperm.endsWith('X') ? 'daughter' : 'son'
+  }.`;
+// Solution 7
+const chromosomeCheck = sperm =>
+  "Congratulations! You're going to have a " +
+  (~sperm.indexOf('Y') ? 'son.' : 'daughter.');
+// Solution 8
+const chromosomeCheck = sperm =>
+  `Congratulations! You're going to have a ${
+    sperm === 'XY' ? 'son' : 'daughter'
+  }.`;
+// Solution 9
+const chromosomeCheck = sperm =>
+  "Congratulations! You're going to have a " +
+  (sperm === 'XY' ? 'son' : 'daughter') +
+  '.';
+// Solution 10
+const chromosomeCheck = sperm =>
+  `Congratulations! You\'re going to have a ${
+    sperm.includes('Y') ? 'son' : 'daughter'
+  }.`;
+// Solution 11
+const chromosomeCheck = sperm => {
+  const son = "Congratulations! You're going to have a son.";
+  const daughter = "Congratulations! You're going to have a daughter.";
+  return sperm.includes('Y') ? son : daughter;
+};
+// Solution 12
+const chromosomeCheck = sperm => {
+  const text = a => `Congratulations! You're going to have a ${a}.`;
   return sperm.search('Y') === -1 ? text('daughter') : text('son');
-}
+};
 ```
 #### Alan Partridge II - Apple Turnover
 ```javascript
-const apple = x => +x * +x > 1000
-? 'It\'s hotter than the sun!!'
-: 'Help yourself to a honeycomb Yorkie for the glovebox.'
-
-const apple = x => x ** 2 > 1000 
-? 'It\'s hotter than the sun!!' 
-: 'Help yourself to a honeycomb Yorkie for the glovebox.' ;
-
-const apple = x => Math.pow(x, 2) > 1000 
-? "It's hotter than the sun!!" 
-: "Help yourself to a honeycomb Yorkie for the glovebox.";
+// Solution 1
+const apple = x =>
+  +x * +x > 1000
+    ? "It's hotter than the sun!!"
+    : 'Help yourself to a honeycomb Yorkie for the glovebox.';
+// Solution 2
+const apple = x =>
+  x ** 2 > 1000
+    ? "It's hotter than the sun!!"
+    : 'Help yourself to a honeycomb Yorkie for the glovebox.';
+// Solution 3
+const apple = x =>
+  Math.pow(x, 2) > 1000
+    ? "It's hotter than the sun!!"
+    : 'Help yourself to a honeycomb Yorkie for the glovebox.';
 ```
 #### Sleigh Authentication
 ```javascript
+// Solution 1
 function Sleigh() {}
-
 Sleigh.prototype.authenticate = function(name, password) {
-  return name == "Santa Claus" && password == "Ho Ho Ho!";
-};
-
-function Sleigh() {}
-
-Sleigh.prototype.authenticate = function(name, password) {
-  if (name === "Santa Claus" && password === "Ho Ho Ho!") return true
-  return false
-};
-
-function Sleigh() {}
-
-Sleigh.prototype.authenticate = function(name, password) {
-  return (name === "Santa Claus" && password === "Ho Ho Ho!")? true : false;
-};
-
-function Sleigh() {
-  this.name = "Santa Claus";
-  this.password = "Ho Ho Ho!";
+  return name == 'Santa Claus' && password == 'Ho Ho Ho!';
 }
-
+// Solution 2
+function Sleigh() {}
+Sleigh.prototype.authenticate = function(name, password) {
+  if (name === 'Santa Claus' && password === 'Ho Ho Ho!') return true;
+  return false;
+}
+// Solution 3
+function Sleigh() {}
+Sleigh.prototype.authenticate = function(name, password) {
+  return name === 'Santa Claus' && password === 'Ho Ho Ho!' ? true : false;
+}
+// Solution 4
+function Sleigh() {
+  this.name = 'Santa Claus';
+  this.password = 'Ho Ho Ho!';
+}
 Sleigh.prototype.authenticate = function(name, password) {
   return this.name == name && this.password == password;
-};
-
-class Sleigh {
-   authenticate(name, password) {
-       return name == "Santa Claus" && password == "Ho Ho Ho!";
-   }
 }
-
+// Solution 5
 class Sleigh {
-  constructor () {
+  authenticate(name, password) {
+    return name == 'Santa Claus' && password == 'Ho Ho Ho!';
+  }
+}
+// Solution 6
+class Sleigh {
+  constructor() {
     this.users = {
-      'Santa Claus': "Ho Ho Ho!"
+      'Santa Claus': 'Ho Ho Ho!'
     }
   }
-  authenticate (name, password) {
-    return this.users[name] === password
+  authenticate(name, password) {
+    return this.users[name] === password;
   }
 }
-
+// Solution 7
 function Sleigh() {}
-
-Sleigh.prototype.authenticate = function (name, password) {
+Sleigh.prototype.authenticate = function(name, password) {
   if (name !== 'Santa Claus' || password !== 'Ho Ho Ho!') {
     return false;
   } else {
     return true;
   }
-};
+}
 ```
 #### Is n divisible by x and y?
 ```javascript
+// Solution 1
 const isDivisible = (n, x, y) => n % x === 0 && n % y === 0;
-
+// Solution 2
 const isDivisible = (n, x, y) => (n % x) + (n % y) === 0;
-
+// Solution 3
 const isDivisible = (n, x, y) => !(n % x || n % y);
-
+// Solution 4
 const isDivisible = (n, x, y) => !(n % x | n % y);
 ```
 #### Rock Paper Scissors!
 ```javascript
+// Solution 1
 const rps = (p1, p2) => {
-  if ((p1 === 'rock' && p2 === 'scissors') || (p1 === 'scissors' && p2 === 'paper') || (p1 === 'paper' && p2 === 'rock')) return 'Player 1 won!';
-  if ((p1 === 'scissors' && p2 === 'rock') || (p1 === 'paper' && p2 === 'scissors') || (p1 === 'rock' && p2 === 'paper')) return 'Player 2 won!';
+  if (
+    (p1 === 'rock' && p2 === 'scissors') ||
+    (p1 === 'scissors' && p2 === 'paper') ||
+    (p1 === 'paper' && p2 === 'rock')
+  )
+    return 'Player 1 won!';
+  if (
+    (p1 === 'scissors' && p2 === 'rock') ||
+    (p1 === 'paper' && p2 === 'scissors') ||
+    (p1 === 'rock' && p2 === 'paper')
+  )
+    return 'Player 2 won!';
   return 'Draw!';
 };
-
-const rps = (p1, p2) => p1 === p2 ? 'Draw!' : `Player ${/rockscissors|scissorspaper|paperrock/.test(p1 + p2) ? 1 : 2} won!`;
+// Solution 2
+const rps = (p1, p2) =>
+  p1 === p2
+    ? 'Draw!'
+    : `Player ${
+        /rockscissors|scissorspaper|paperrock/.test(p1 + p2) ? 1 : 2
+      } won!`;
 ```
 #### Can we divide it?
 ```javascript
@@ -444,79 +516,98 @@ const isDivideBy = (number, a, b) => number % a === 0 && number % b === 0;
 ```
 #### Student's Final Grade
 ```javascript
-function finalGrade (exam, projects) {
-  if (exam > 90 || projects > 10)  return 100
-  if (exam > 75 && projects >= 5)  return 90
-  if (exam > 50 && projects >= 2)  return 75
-  return 0
+// Solution 1
+const finalGrade = (exam, projects) => {
+  if (exam > 90 || projects > 10) return 100;
+  if (exam > 75 && projects >= 5) return 90;
+  if (exam > 50 && projects >= 2) return 75;
+  return 0;
 };
-
-const final_Grade = (exam, projects) => exam > 90 || projects > 10 ? 100 : exam > 75 && projects > 4 ? 90 : exam > 50 && projects > 1 ? 75 : 0;
+// Solution 2
+const final_Grade = (exam, projects) =>
+  exam > 90 || projects > 10
+    ? 100
+    : exam > 75 && projects > 4
+    ? 90
+    : exam > 50 && projects > 1
+    ? 75
+    : 0;
 ```
 #### L1: Set Alarm
 ```javascript
-function setAlarm(employed, vacation) {
-if (employed === true && vacation === false) return true
-return false
+// Solution 1
+const setAlarm = (employed, vacation) => {
+  if (employed === true && vacation === false) return true;
+  return false;
 };
-
-const setAlarm = (employed, vacation) => employed === true && vacation === false ? true :false;
-
+// Solution 2
+const setAlarm = (employed, vacation) =>
+  employed === true && vacation === false ? true : false;
+// Solution 3
 const setAlarm = (employed, vacation) => employed && !vacation;
 ```
 #### Is this a triangle?
 ```javascript
-const isTriangle = (a,b,c) => a + b > c && a + c > b && c + b > a;
-
-const isTriangle = (a,b,c) => Math.max(a,b,c) < (a + b + c) / 2;
-
+// Solution 1
+const isTriangle = (a, b, c) => a + b > c && a + c > b && c + b > a;
+// Solution 2
+const isTriangle = (a, b, c) => Math.max(a, b, c) < (a + b + c) / 2;
+// Solution 3
 const isTriangle = (a, b, c) => (a = [a, b, c].sort())[0] + a[1] > a[2];
 ```
 #### Calculate Two People's Individual Ages
 ```javascript
-function getAges(s, d){
-  if (s < 0 || d < 0 || s < d) return null
+// Solution 1
+const getAges = (s, d) => {
+  if (s < 0 || d < 0 || s < d) return null;
   return [(s + d) / 2, (s - d) / 2];
 };
-
-function getAges(s, d){
-  return s < 0 || d < 0 || s < d ? null : [(s + d) / 2, (s - d) / 2]
+// Solution 2
+const getAges = (s, d) => {
+  return s < 0 || d < 0 || s < d ? null : [(s + d) / 2, (s - d) / 2];
 };
 ```
 #### Do I get a bonus?
 ```javascript
+// Solution 1
 const bonusTime = (salary, bonus) => `£${salary * (bonus ? 10 : 1)}`;
-
+// Solution 2
 const bonusTime = (salary, bonus) => '£' + salary * (bonus ? 10 : 1);
-
+// Solution 3
 const bonusTime = (salary, bonus) => '£' + (bonus ? salary * 10 : salary);
-
-const bonusTime = (salary, bonus) => bonus ? `£${salary * 10}` : `£${salary}`;
-
-const bonusTime = (salary, bonus) => bonus ? ('£'+ salary +'0') : ('£'+salary);
+// Solution 4
+const bonusTime = (salary, bonus) => (bonus ? `£${salary * 10}` : `£${salary}`);
+// Solution 5
+const bonusTime = (salary, bonus) =>
+  bonus ? '£' + salary + '0' : '£' + salary;
 ```
 #### 101 Dalmatians - squash the bugs, not the dogs!
 ```javascript
-const dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIANS!!!"];
-
-const howManyDalmatians = number  => number <= 10 ? dogs[0] : number <= 50 ? dogs[1] : number <= 100 ? dogs[2] : dogs[3];
+// Solution 1
+const dogs = [
+  'Hardly any',
+  'More than a handful!',
+  "Woah that's a lot of dogs!",
+  '101 DALMATIANS!!!'
+];
+// Solution 2
+const howManyDalmatians = number =>
+  number <= 10
+    ? dogs[0]
+    : number <= 50
+    ? dogs[1]
+    : number <= 100
+    ? dogs[2]
+    : dogs[3];
 ```
 #### Training JS #7: if..else and ternary operator
 ```javascript
-const saleHotdogs = n => n < 5 ? n * 100 : n >= 5 && n < 10 ? n * 95 : n * 90;
-
+// Solution 1
+const saleHotdogs = n => (n < 5 ? n * 100 : n >= 5 && n < 10 ? n * 95 : n * 90);
+// Solution 2
 const saleHotdogs = n => n * (n < 5 ? 100 : n < 10 ? 95 : 90);
 ```
 #### Be Concise I - The Ternary Operator
 ```javascript
-const describeAge = age =>
-  `You're a(n) ${
-    age <= 12
-      ? 'kid'
-      : age >= 13 && age <= 17
-      ? 'teenager'
-      : age >= 18 && age <= 64
-      ? 'adult'
-      : 'elderly'
-  }`;
+const describeAge = age => `You're a(n) ${age <= 12 ? 'kid' : age >= 13 && age <= 17 ? 'teenager' : age >= 18 && age <= 64 ? 'adult' : 'elderly'}`;
 ```
