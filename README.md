@@ -643,3 +643,27 @@ const saleHotdogs = n => n * (n < 5 ? 100 : n < 10 ? 95 : 90);
 ```javascript
 const describeAge = age => `You're a(n) ${age <= 12 ? 'kid' : age >= 13 && age <= 17 ? 'teenager' : age >= 18 && age <= 64 ? 'adult' : 'elderly'}`;
 ```
+#### Basic Mathematical Operations
+```javascript
+// Solution 1
+const basicOp = (operation, value1, value2) => eval(value1 + operation + value2);
+// Solution 2
+const basicOp = (operation, value1, value2) => {
+    switch (operation) {
+        case '+': return value1 + value2;
+        case '-': return value1 - value2;
+        case '*': return value1 * value2;
+        case '/': return value1 / value2;
+    }
+};
+// Solution 2
+const basicOp = (operation, value1, value2) => {
+  var cases = {
+    '+': value1 + value2,
+    '-': value1 - value2,
+    '*': value1 * value2,
+    '/': value1 / value2
+  };
+  return cases[operation]
+};
+```
