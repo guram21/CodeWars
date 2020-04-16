@@ -667,3 +667,37 @@ const basicOp = (operation, value1, value2) => {
   return cases[operation]
 };
 ```
+#### simple calculator
+```javascript
+// Solution 1
+const calculator = (a, b, sign) =>
+  !isNaN(a + b) && /[\+\-\*\/]/.test(sign)
+    ? eval(a + sign + b)
+    : 'unknown value';
+// Solution 2
+const calculator = (a, b, sign) => {
+  if (typeof a === 'number' && typeof b === 'number')
+    switch (sign) {
+      case '+':
+        return a + b;
+      case '-':
+        return a - b;
+      case '*':
+        return a * b;
+      case '/':
+        return a / b;
+      default:
+        return 'unknown value';
+    }
+};
+// Solution 3
+const calculator = (a, b, sign) => {
+  let operation = {
+    '+': a + b,
+    '-': a - b,
+    '*': a * b,
+    '/': a / b
+  };
+  return operation[sign] ? operation[sign] : 'unknown value';
+};
+```
