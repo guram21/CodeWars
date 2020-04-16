@@ -207,6 +207,15 @@ const a = (123).toString();
 // Solution 10
 const a = 123['toString']();
 ```
+#### Convert a String to a Number!
+```javascript
+// Solution 1
+const stringToNumber = str => +str;
+// Solution 2
+const stringToNumber = str => Number(str);
+// Solution 3
+const stringToNumber = str => parseInt(str);
+```
 #### Convert a Boolean to a String
 ```javascript
 // Solution 1
