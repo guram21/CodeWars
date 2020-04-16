@@ -704,7 +704,7 @@ const calculator = (a, b, sign) => {
 #### Switch it Up!
 ```javascript
 // Solution 1
-var switchItUp = number =>
+const switchItUp = number =>
   [
     'Zero',
     'One',
@@ -718,11 +718,11 @@ var switchItUp = number =>
     'Nine'
   ][number];
 // Solution 2
-var switchItUp = number =>
+const switchItUp = number =>
   'Zero One Two Three Four Five Six Seven Eight Nine'.split(' ')[number];
 // Solution 2
-var switchItUp = number => {
-  var words = [
+const switchItUp = number => {
+  const words = [
     'Zero',
     'One',
     'Two',
@@ -737,7 +737,7 @@ var switchItUp = number => {
   return words[number];
 };
 // Solution 3
-var switchItUp = number => {
+const switchItUp = number => {
   switch (number) {
     case 0:
       return 'Zero';
@@ -762,7 +762,7 @@ var switchItUp = number => {
   }
 };
 // Solution 4
-var switchItUp = number => {
+const switchItUp = number => {
   return {
     0: 'Zero',
     1: 'One',
@@ -777,7 +777,7 @@ var switchItUp = number => {
   }[number];
 };
 // Solution 5
-var switchItUp = number =>
+const switchItUp = number =>
   number === 1
     ? 'One'
     : number === 2
@@ -799,4 +799,26 @@ var switchItUp = number =>
     : number === 0
     ? 'Zero'
     : '0-9 only!';
+```
+#### No zeros for heros
+```javascript
+// Solution 1
+const noBoringZeros = n => {
+  while (n % 10 === 0 && n !== 0) {
+    n = n / 10;
+  }
+  return n;
+};
+// Solution 2
+const noBoringZeros = n => +`${n}`.replace(/0+$/, '');
+// Solution 3
+const noBoringZeros = n => +(n + '').replace(/0*$/, '');
+// Solution 4
+const noBoringZeros = n => +String(n).replace(/[0]+$/g, '');
+// Solution 5
+const noBoringZeros = n => Number(n.toString().replace(/0+$/g, ''));
+// Solution 6
+const noBoringZeros = n => (!n || n % 10 ? n : noBoringZeros(n / 10));
+// Solution 7
+const noBoringZeros = n => (n % 10 || n === 0 ? n : noBoringZeros(n / 10));
 ```
