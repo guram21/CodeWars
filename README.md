@@ -184,6 +184,29 @@ var numberToString = num => num + '';
 // Solution 4
 var numberToString = num => `${num}`;
 ```
+#### Number toString
+```javascript
+// Solution 1
+const a = '123';
+// Solution 2
+const a = "123";
+// Solution 3
+const a = `123`;
+// Solution 4
+const a = 123 + '';
+// Solution 5
+const a = `${123}`;
+// Solution 6
+const a = String(123);
+// Solution 7
+const a = 123..toString();
+// Solution 8
+const a = 123 .toString();
+// Solution 9
+const a = (123).toString();
+// Solution 10
+const a = 123['toString']();
+```
 #### Convert a Boolean to a String
 ```javascript
 // Solution 1
