@@ -848,3 +848,23 @@ const isPowerOfTwo = n => (n === 0 ? false : (n & (n - 1)) === 0);
 // Solution 9
 const isPowerOfTwo = n => (n === 1 ? true : n < 1 ? false : isPowerOfTwo(n / 2));
 ```
+#### Difference Of Squares
+```javascript
+const differenceOfSquares = x => x * (x * x - 1) * (3 * x + 2) / 12;
+
+const differenceOfSquares = x => Math.pow(x * (x + 1) / 2, 2) - x * (x + 1) * (2 * x + 1) / 6;
+
+const differenceOfSquares = n => n * n * (n + 1) * (n + 1) / 4 - n * (n + 1) * (2 * n + 1) / 6;
+
+const differenceOfSquares = n {
+  let sum = 0;
+  let sumSquares = 0;
+  while (n > 0) {
+    sum += n;
+    sumSquares += Math.pow(n, 2);
+    n--;
+  }
+  let squareSum = Math.pow(sum, 2)
+  return squareSum - sumSquares;
+};
+```
