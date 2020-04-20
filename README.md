@@ -850,16 +850,16 @@ const isPowerOfTwo = n => (n === 1 ? true : n < 1 ? false : isPowerOfTwo(n / 2))
 ```
 #### Difference Of Squares
 ```javascript
+// Solution 1
 const differenceOfSquares = x => x * (x * x - 1) * (3 * x + 2) / 12;
-
+// Solution 2
 const differenceOfSquares = x => Math.pow(x * (x + 1) / 2, 2) - x * (x + 1) * (2 * x + 1) / 6;
-
+// Solution 
 const differenceOfSquares = n => n * n * (n + 1) * (n + 1) / 4 - n * (n + 1) * (2 * n + 1) / 6;
-
-const differenceOfSquares = n {
-  let sum = 0;
-  let sumSquares = 0;
-  while (n > 0) {
+// Solution 4
+const differenceOfSquares = n => {
+  let sum = 0, sumSquares = 0;
+    while (n > 0) {
     sum += n;
     sumSquares += Math.pow(n, 2);
     n--;
