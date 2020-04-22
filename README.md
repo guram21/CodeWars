@@ -868,3 +868,7 @@ const differenceOfSquares = n => {
   return squareSum - sumSquares;
 };
 ```
+#### Factorial
+```javascript
+const factorial = n => n > 1 ? n * factorial(--n) : 1;
+```
