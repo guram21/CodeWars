@@ -872,3 +872,25 @@ const differenceOfSquares = n => {
 ```javascript
 const factorial = n => n > 1 ? n * factorial(--n) : 1;
 ```
+#### Powers of 3
+```javascript
+// Solution 1
+var largestPower = num => {
+  let k = 0;
+  while (3 ** k < num) ++k;
+  return --k;
+};
+// Solution 2
+var largestPower = num => {
+  for (let i = 0; i < 999; i++) if (Math.pow(3, i) >= num) return --i;
+};
+// Solution 3
+var largestPower = num => {
+  for (let i = -1, k = 1; ; i++, k *= 3) if (k >= num) return i;
+};
+// Solution 4
+var largestPower = num => Math.ceil(Math.log10(num) / Math.log10(3)) - 1;
+// Solution 5
+var largestPower = (num, a = -1) =>
+  Math.pow(3, a) >= num ? --a : largestPower(num, a + 1);
+```
