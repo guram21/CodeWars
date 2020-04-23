@@ -894,3 +894,28 @@ var largestPower = num => Math.ceil(Math.log10(num) / Math.log10(3)) - 1;
 var largestPower = (num, a = -1) =>
   Math.pow(3, a) >= num ? --a : largestPower(num, a + 1);
 ```
+#### The wheat/rice and chessboard problem
+```javascript
+// Solution 1
+var squaresNeeded = grains => {
+  let i = 0;
+  while (2 ** i - 1 < grains) {
+    i++;
+  }
+  return i;
+};
+// Solution 2
+var squaresNeeded = grains => (1 + Math.log2(grains)) | 0;
+// Solution 3
+var squaresNeeded = grains => Math.ceil(Math.log2(++grains));
+// Solution 4
+var squaresNeeded = grains => (grains ? grains.toString(2).length : 0);
+// Solution 5
+var squaresNeeded = grains => (!grains ? 0 : grains.toString(2).length);
+// Solution 6
+var squaresNeeded = grains =>
+  grains > 0 ? grains.toString(2).split('').length : 0;
+// Solution 7
+var squaresNeeded = grains =>
+  grains === 0 ? 0 : 1 + squaresNeeded(Math.floor(grains / 2));
+```
