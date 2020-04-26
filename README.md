@@ -955,3 +955,11 @@ const summation = function f(num) {
   return num ? num + f(num - 1) : 0;
 };
 ```
+#### Beginner Series #3 Sum of Numbers
+```javascript
+const getSum = (a, b) => {
+  const min = Math.min(a, b),
+    max = Math.max(a, b);
+  return ((max - min + 1) * (min + max)) / 2;
+};
+```
