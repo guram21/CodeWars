@@ -875,29 +875,29 @@ const factorial = n => n > 1 ? n * factorial(--n) : 1;
 #### Powers of 3
 ```javascript
 // Solution 1
-var largestPower = num => {
+const largestPower = num => {
   let k = 0;
   while (3 ** k < num) ++k;
   return --k;
 };
 // Solution 2
-var largestPower = num => {
+const largestPower = num => {
   for (let i = 0; i < 999; i++) if (Math.pow(3, i) >= num) return --i;
 };
 // Solution 3
-var largestPower = num => {
+const largestPower = num => {
   for (let i = -1, k = 1; ; i++, k *= 3) if (k >= num) return i;
 };
 // Solution 4
-var largestPower = num => Math.ceil(Math.log10(num) / Math.log10(3)) - 1;
+const largestPower = num => Math.ceil(Math.log10(num) / Math.log10(3)) - 1;
 // Solution 5
-var largestPower = (num, a = -1) =>
+const largestPower = (num, a = -1) =>
   Math.pow(3, a) >= num ? --a : largestPower(num, a + 1);
 ```
 #### The wheat/rice and chessboard problem
 ```javascript
 // Solution 1
-var squaresNeeded = grains => {
+const squaresNeeded = grains => {
   let i = 0;
   while (2 ** i - 1 < grains) {
     i++;
@@ -905,17 +905,37 @@ var squaresNeeded = grains => {
   return i;
 };
 // Solution 2
-var squaresNeeded = grains => (1 + Math.log2(grains)) | 0;
+const squaresNeeded = grains => (1 + Math.log2(grains)) | 0;
 // Solution 3
-var squaresNeeded = grains => Math.ceil(Math.log2(++grains));
+const squaresNeeded = grains => Math.ceil(Math.log2(++grains));
 // Solution 4
-var squaresNeeded = grains => (grains ? grains.toString(2).length : 0);
+const squaresNeeded = grains => (grains ? grains.toString(2).length : 0);
 // Solution 5
-var squaresNeeded = grains => (!grains ? 0 : grains.toString(2).length);
+const squaresNeeded = grains => (!grains ? 0 : grains.toString(2).length);
 // Solution 6
-var squaresNeeded = grains =>
+const squaresNeeded = grains =>
   grains > 0 ? grains.toString(2).split('').length : 0;
 // Solution 7
-var squaresNeeded = grains =>
+const squaresNeeded = grains =>
   grains === 0 ? 0 : 1 + squaresNeeded(Math.floor(grains / 2));
 ```
+#### Sum of Multiples
+```javascript
+// Solution 1
+const sumMul = (n, m) => {
+  if (n >= m) return 'INVALID';
+  let sum = 0;
+  for (let i = n; i < m; i += n) {
+    sum += i;
+  }
+  return sum;
+};
+// Solution 2
+const sumMul = (n, m, k = Math.floor(m / n)) =>
+  n >= m || m <= 0
+    ? 'INVALID'
+    : m % n !== 0
+    ? (n * k * (k + 1)) / 2
+    : (n * k * (k - 1)) / 2;
+```
+
