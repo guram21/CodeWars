@@ -973,3 +973,11 @@ const SeriesSum = n => {
   return sum.toFixed(2);
 };
 ```
+#### Miles per gallon to kilometers per liter
+```javascript
+// Solution 1
+const converter = mpg => +(mpg * 0.354006043538214).toFixed(2);
+// Solution 2
+const converter = mpg => +(mpg / 2.82481053).toFixed(2);
+```
+
