@@ -1012,3 +1012,7 @@ const [money, candy, chips, soda, change] = '10$1.42$2.40$1.00$5.18'
   .split('$')
   .map(Number);
 ```
+#### Grasshopper - Basic Function Fixer
+```javascript
+const addFive = num => num + 5;
+``` 
