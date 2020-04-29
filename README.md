@@ -1043,3 +1043,18 @@ const myFirstKata = (a, b) => (+a === a && +b === b ? (a % b) + (b % a) : false)
 // Solution 4
 const myFirstKata = (a, b) => (a % b) + (b % a) || !!0;
 ```
+#### Training JS #6: Basic data types--Boolean and conditional statements if..else
+```javascript
+// Solution 1
+const trueOrFalse = val => Boolean(val).toString();
+// Solution 2
+const trueOrFalse = val => String(Boolean(val));
+// Solution 3
+const trueOrFalse = val => (!!val).toString();
+// Solution 4
+const trueOrFalse = val => Boolean(val) + '';
+// Solution 5
+const trueOrFalse = val => String(!!val);
+// Solution 6
+const trueOrFalse = val => !!val + '';
+```
