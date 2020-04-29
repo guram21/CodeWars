@@ -1084,17 +1084,21 @@ const getPlanetName = id => {
 #### Power
 ```javascript
 // Solution 1
-var numberToPower = (number, power) => {
+const numberToPower = (number, power) => {
   let sum = 1;
   for (let i = 1; i <= power; i++) sum *= number;
   return sum;
 };
 // Solution 2
-var numberToPower = (number, power) =>
+const numberToPower = (number, power) =>
   power > 0 ? number * numberToPower(number, power - 1) : 1;
 // Solution 3
-var numberToPower = (number, power) =>
+const numberToPower = (number, power) =>
   Array(power)
     .fill(number)
     .reduce((res, n) => res * n, 1);
+```
+#### Is it a palindrome?
+```javascript
+const isPalindrome = x => (x = x.toLowerCase()) === x.split('').reverse().join('');
 ```
