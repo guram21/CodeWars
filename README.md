@@ -980,4 +980,20 @@ const converter = mpg => +(mpg * 0.354006043538214).toFixed(2);
 // Solution 2
 const converter = mpg => +(mpg / 2.82481053).toFixed(2);
 ```
-
+#### Find the Slope
+```javascript
+// Solution 1
+const slope = points =>
+  points[2] === points[0]
+    ? 'undefined'
+    : `${(points[3] - points[1]) / (points[2] - points[0])}`;
+// Solution 2
+const slope = points =>
+  String(
+    points[2] !== points[0]
+      ? (points[3] - points[1]) / (points[2] - points[0])
+      : undefined
+  );
+// Solution 3
+const slope = ([a, b, c, d]) => (a === c ? 'undefined' : `${(b - d) / (a - c)}`);
+```
