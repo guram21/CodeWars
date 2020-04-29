@@ -1030,3 +1030,16 @@ const equal3 = () => v1 * v5;
 const equal4 = () => v4 / v5;
 const equal5 = () => v2 % v4;
 ```
+#### Fix the Bugs (Syntax) - My First Kata
+```javascript
+// Solution 1
+const myFirstKata = (a, b) =>
+  typeof a !== 'number' || typeof b !== 'number' ? false : (a % b) + (b % a);
+// Solution 2
+const myFirstKata = (a, b) =>
+  typeof a === 'number' && typeof b === 'number' ? (a % b) + (b % a) : false;
+// Solution 3
+const myFirstKata = (a, b) => (+a === a && +b === b ? (a % b) + (b % a) : false);
+// Solution 4
+const myFirstKata = (a, b) => (a % b) + (b % a) || !!0;
+```
