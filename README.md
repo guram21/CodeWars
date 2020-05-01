@@ -1111,3 +1111,16 @@ const isReallyNaN = val => val !== val;
 // Solution 3
 const { isNaN: isReallyNaN } = Number;
 ```
+#### Filter the number
+```javascript
+// Solution 1
+var FilterString = value => +value.replace(/[a-z]/gi, '');
+// Solution 2
+var FilterString = value => +value.replace(/[^0-9]/g, '');
+// Solution 3
+var FilterString = value => +value.replace(/[^\d]/g, '');
+// Solution 4
+var FilterString = value => +value.replace(/\D+/g, '');
+// Solution 5
+var FilterString = value => +value.replace(/\D/g, '');
+```
