@@ -1102,3 +1102,12 @@ const numberToPower = (number, power) =>
 ```javascript
 const isPalindrome = x => (x = x.toLowerCase()) === x.split('').reverse().join('');
 ```
+#### isReallyNaN
+```javascript
+// Solution 1
+const isReallyNaN = val => Number.isNaN;
+// Solution 2
+const isReallyNaN = val => val !== val;
+// Solution 3
+const { isNaN: isReallyNaN } = Number;
+```
