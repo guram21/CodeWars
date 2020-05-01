@@ -1124,3 +1124,7 @@ var FilterString = value => +value.replace(/\D+/g, '');
 // Solution 5
 var FilterString = value => +value.replace(/\D/g, '');
 ```
+#### Is integer safe to use?
+```javascript
+const SafeInteger = n => Number.isSafeInteger(n);
+```
