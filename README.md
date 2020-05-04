@@ -5,7 +5,27 @@ const multiply = (a, b) => a * b;
 ```
 #### Draw stairs
 ```javascript
-
+// Solution 1
+const drawStairs = n => {
+  let res = '';
+  for (let i = 1; i <= n; i++) {
+    res += i === n ? 'I' : 'I\n' + ' '.repeat(i);
+  }
+  return res;
+};
+// Solution 2
+const drawStairs = n => {
+  let stairs = '',
+    space = ' ';
+  for (let i = 0; i < n - 1; i++) {
+    stairs += 'I\n' + space;
+    space += ' ';
+  }
+  return stairs + 'I';
+};
+// Solution 3
+const drawStairs = n =>
+  [...Array(n)].map((_, i) => ' '.repeat(i) + 'I').join('\n');
 ```
 #### A wolf in sheep's clothing
 ```javascript
