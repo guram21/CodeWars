@@ -241,28 +241,26 @@ const stringToNumber = str => parseInt(str);
 // Solution 1
 const booleanToString = String;
 // Solution 2
-const booleanToString = b => String;
-// Solution 3
 const booleanToString = b => `${b}`;
-// Solution 4
+// Solution 3
 const booleanToString = b => b + '';
-// Solution 5
+// Solution 4
 const booleanToString = b => '' + b;
-// Solution 6
+// Solution 5
 const booleanToString = b => String(b);
-// Solution 7
+// Solution 6
 const booleanToString = b => b.toString();
-// Solution 8
+// Solution 7
 const booleanToString = b => Boolean(b) + '';
-// Solution 9
+// Solution 8
 const booleanToString = b => '' + Boolean(b);
-// Solution 10
+// Solution 9
 const booleanToString = b => (b ? 'true' : 'false');
-// Solution 11
+// Solution 10
 const booleanToString = b => (b ? 'false' : 'true');
-// Solution 12
+// Solution 11
 const booleanToString = b => (b === true ? 'true' : 'false');
-// Solution 13
+// Solution 12
 const booleanToString = b => (b === false ? 'false' : 'true');
 ```
 #### Sum The Strings
