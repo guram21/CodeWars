@@ -1153,3 +1153,7 @@ const makeNegative = num => num < 0 ? num : -num;
 // Solution 2
 const makeNegative = num => -Math.abs(num);
 ```
+#### Opposite number
+```javascript
+const opposite = number => -number;
+```
