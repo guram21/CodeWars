@@ -1146,3 +1146,10 @@ var FilterString = value => +value.replace(/\D/g, '');
 ```javascript
 const SafeInteger = n => Number.isSafeInteger(n);
 ```
+#### Return Negative
+```javascript
+// Solution 1
+const makeNegative = num => num < 0 ? num : -num;
+// Solution 2
+const makeNegative = num => -Math.abs(num);
+```
