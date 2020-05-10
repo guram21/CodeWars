@@ -1157,3 +1157,16 @@ const makeNegative = num => -Math.abs(num);
 ```javascript
 const opposite = number => -number;
 ```
+#### Invert values
+```javascript
+// Solution1
+const invert = arr => arr.map(el => el === 0 ? el : -el);
+// Solution 2
+const invert = arr => arr.map(el => 0 - el);
+// Solution 3
+const invert = arr => {
+  const newArr = [];
+  for (let i = 0; i < arr.length; i++) newArr.push(-arr[i]);
+  return newArr;
+};
+```
