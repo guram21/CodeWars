@@ -1170,3 +1170,10 @@ const invert = arr => {
   return newArr;
 };
 ```
+#### BASIC: Making Six Toast.
+```javascript
+// Solution 1
+const sixToast = num => num >= 6 ? num - 6 : 6 - num;
+// Solution 2
+const sixToast = num => Math.abs(num - 6);
+```
