@@ -1186,3 +1186,8 @@ const elevator = (left, right, call) =>
 const elevator = (left, right, call) =>
   (call - left) ** 2 < (call - right) ** 2 ? 'left' : 'right';
 ```
+#### To square(root) or not to square(root)
+```javascript
+const squareOrSquareRoot = arr =>
+  arr.map(el => el ** 0.5 % 1 ? el * el : el ** 0.5);
+```
