@@ -1177,3 +1177,12 @@ const sixToast = num => num >= 6 ? num - 6 : 6 - num;
 // Solution 2
 const sixToast = num => Math.abs(num - 6);
 ```
+#### Closest elevator
+```javascript
+// Solution 1
+const elevator = (left, right, call) =>
+  Math.abs(call - left) < Math.abs(call - right) ? 'left' : 'right';
+// Solution 2
+const elevator = (left, right, call) =>
+  (call - left) ** 2 < (call - right) ** 2 ? 'left' : 'right';
+```
