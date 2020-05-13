@@ -1206,3 +1206,21 @@ const squares = (x, n) => {
   return arr;
 };
 ```
+#### Square Every Digit
+```javascript
+// Solution 1
+const squareDigits = num =>
+  +(num + '')
+    .split('')
+    .map(el => el * el)
+    .join('');
+// Solution 2
+const squareDigits = num => {
+  const str = num + '',
+    res = [];
+  for (let i = 0; i < str.length; i++) {
+    res[i] = str[i] * str[i];
+  }
+  return +res.join('');
+};
+```
