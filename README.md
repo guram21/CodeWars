@@ -1191,3 +1191,18 @@ const elevator = (left, right, call) =>
 const squareOrSquareRoot = arr =>
   arr.map(el => el ** 0.5 % 1 ? el * el : el ** 0.5);
 ```
+#### Squares sequence
+```javascript
+// Solution 1
+const squares = (x, n) =>
+  Array.from({ length: n }, (_, i) => Math.pow(x, Math.pow(2, i)));
+// Solution 2
+const squares = (x, n) => {
+  const arr = [];
+  for (let i = 0; i < n; i++){
+    arr.push(x);
+    x = Math.pow(x, 2);
+  }
+  return arr;
+};
+```
