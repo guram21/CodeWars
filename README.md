@@ -83,14 +83,24 @@ DNAStrand.pairs = {
 ```
 #### Count of positives / sum of negatives
 ```javascript
+// Solution 1
 const countPositivesSumNegatives = arr => {
-  if (arr === null || arr.length === 0) return [];
-  let countPos = 0,
-    sumNeg = 0;
+  if (!arr || !arr.length) return [];
+  let count = 0,
+    sum = 0;
   for (let i = 0; i < arr.length; i++) {
-    arr[i] > 0 ? countPos++ : (sumNeg += arr[i]);
+    arr[i] > 0 ? count++ : sum += arr[i];
   }
-  return [countPos, sumNeg];
+  return [count, sum];
+};
+// Solution 2
+const countPositivesSumNegatives = arr => {
+  return arr !== null && arr.length > 0
+    ? [
+      arr.filter(el => el > 0).length,
+      arr.filter(el => el < 0).reduce((a, b) => a + b, 0),
+    ]
+    : [];
 };
 ```
 #### Sum of differences in array
