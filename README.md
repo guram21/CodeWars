@@ -1224,3 +1224,23 @@ const squareDigits = num => {
   return +res.join('');
 };
 ```
+#### Find the next perfect square!
+```javascript
+// Solution 1
+const findNextSquare = (n, sq = n ** 0.5) => sq % 1 ? -1 : ++sq * sq;
+// Solution 2
+const findNextSquare = sq => sq ** 0.5 % 1 ? -1 : (sq ** 0.5 + 1) ** 2;
+// Solution 3
+const findNextSquare = sq => (sq = Math.sqrt(sq)) % 1 ? -1 : ++sq ** 2;
+// Solution 4
+const findNextSquare = sq =>
+  Math.round(sq = Math.sqrt(sq)) === sq ? ++sq ** 2 : -1;
+// Solution 5
+const findNextSquare = sq =>
+  Math.sqrt(sq) % 1 ? -1 : Math.pow(Math.sqrt(sq) + 1, 2);
+// Solution 6
+const findNextSquare = sq =>
+  Math.round(Math.sqrt(sq)) === Math.sqrt(sq)
+    ? Math.pow(Math.sqrt(sq) + 1, 2)
+    : -1;
+```
