@@ -1260,3 +1260,18 @@ const findChildren = (santasList, children) => [
   ...new Set(children.filter(el => santasList.includes(el)).sort()),
 ];
 ```
+#### You're a square!
+```javascript
+// Solution 1
+const isSquare = num => Math.sqrt(num) % 1 === 0;
+// Solution 2
+const isSquare = (num, n = Math.sqrt(num)) => ~~n === n;
+// Solution 3
+const isSquare = num => /^[0-9]+$/.test(Math.sqrt(num));
+// Solution 4
+const isSquare = num => Number.isInteger(Math.sqrt(num));
+// Solution 5
+const isSquare = (num, n = Math.sqrt(num)) => n === (n | 0);
+// Solution 6
+const isSquare = (num, n = Math.sqrt(num)) => n === Math.floor(n);
+```
