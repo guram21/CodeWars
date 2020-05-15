@@ -485,7 +485,7 @@ const apple = x =>
 // Solution 1
 function Sleigh() {}
 Sleigh.prototype.authenticate = function(name, password) {
-  return name == 'Santa Claus' && password == 'Ho Ho Ho!';
+  return name === 'Santa Claus' && password === 'Ho Ho Ho!';
 }
 // Solution 2
 function Sleigh() {}
@@ -496,7 +496,7 @@ Sleigh.prototype.authenticate = function(name, password) {
 // Solution 3
 function Sleigh() {}
 Sleigh.prototype.authenticate = function(name, password) {
-  return name === 'Santa Claus' && password === 'Ho Ho Ho!' ? true : false;
+  return name === 'Santa Claus' && password === 'Ho Ho Ho!';
 }
 // Solution 4
 function Sleigh() {
@@ -504,12 +504,12 @@ function Sleigh() {
   this.password = 'Ho Ho Ho!';
 }
 Sleigh.prototype.authenticate = function(name, password) {
-  return this.name == name && this.password == password;
+  return this.name === name && this.password === password;
 }
 // Solution 5
 class Sleigh {
   authenticate(name, password) {
-    return name == 'Santa Claus' && password == 'Ho Ho Ho!';
+    return name === 'Santa Claus' && password === 'Ho Ho Ho!';
   }
 }
 // Solution 6
