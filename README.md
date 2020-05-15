@@ -403,7 +403,7 @@ const getRealFloor = n => (n <= 0 ? n : n < 13 ? n - 1 : n - 2);
 ```javascript
 // Solution 1
 const chromosomeCheck = sperm =>
-  sperm == 'XY'
+  sperm === 'XY'
     ? "Congratulations! You're going to have a son."
     : "Congratulations! You're going to have a daughter.";
 // Solution 2
