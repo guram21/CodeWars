@@ -1275,3 +1275,14 @@ const isSquare = (num, n = Math.sqrt(num)) => n === (n | 0);
 // Solution 6
 const isSquare = (num, n = Math.sqrt(num)) => n === Math.floor(n);
 ```
+#### Beginner Series #4 Cockroach
+```javascript
+// Solution 1
+const cockroachSpeed = s => Math.floor(s * 27.778);
+// Solution 2
+const cockroachSpeed = s => Math.floor(s / .036);
+// Solution 3
+const cockroachSpeed = s => s * 27.778 | 0;
+// Solution 4
+const cockroachSpeed = s => s / .036 | 0;
+```
