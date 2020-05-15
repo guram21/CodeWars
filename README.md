@@ -323,15 +323,15 @@ const hoopCount = n => n >= 10 ? 'Great, now move on to tricks' : 'Keep at it un
 // Solution 1
 const add = (a, b) => a == b;
 // Solution 2
-const add = (a, b) => +a == +b;
+const add = (a, b) => +a === +b;
 // Solution 3
-const add = (a, b) => +a - +b == 0;
+const add = (a, b) => +a - +b === 0;
 // Solution 4
-const add = (a, b) => eval(a - b) == 0;
+const add = (a, b) => eval(a - b) === 0;
 // Solution 5
-const add = (a, b) => a + '' == b + '';
+const add = (a, b) => a + '' === b + '';
 // Solution 6
-const add = (a, b) => `${a}` == `${b}`;
+const add = (a, b) => `${a}` === `${b}`;
 ```
 #### [Is he gonna survive?](https://www.codewars.com/kata//59ca8246d751df55cc00014c)
 ```javascript
