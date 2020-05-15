@@ -1286,3 +1286,10 @@ const cockroachSpeed = s => s * 27.778 | 0;
 // Solution 4
 const cockroachSpeed = s => s / .036 | 0;
 ```
+#### Price of Mangoes
+```javascript
+// Solution 1
+const mango = (quantity, price) => price * (quantity - Math.floor(quantity / 3));
+// Solution 2
+const mango = (quantity, price) => price * (quantity - (quantity / 3 | 0));
+```
