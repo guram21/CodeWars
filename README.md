@@ -849,17 +849,17 @@ const noBoringZeros = n => (n % 10 || n === 0 ? n : noBoringZeros(n / 10));
 ```javascript
 // Solution 1
 const isPowerOfTwo = n => {
-  while (n % 2 === 0 && n != 0) {
+  while (n % 2 === 0 && n !== 0) {
     n /= 2;
   }
-  return n == 1;
+  return n === 1;
 };
 // Solution 2
-const isPowerOfTwo = n => !(n & (n - 1));
+const isPowerOfTwo = n => !(n & n - 1);
 // Solution 3
-const isPowerOfTwo = n => (n & (n - 1)) === 0;
+const isPowerOfTwo = n => (n & n - 1) === 0;
 // Solution 4
-const isPowerOfTwo = n => (n & (~n + 1)) == n;
+const isPowerOfTwo = n => (n & ~n + 1) === n;
 // Solution 5
 const isPowerOfTwo = n => Math.log2(n) % 1 === 0;
 // Solution 6
@@ -867,9 +867,9 @@ const isPowerOfTwo = n => /^10*$/.test(n.toString(2));
 // Solution 7
 const isPowerOfTwo = n => Number.isInteger(Math.log2(n));
 // Solution 8
-const isPowerOfTwo = n => (n === 0 ? false : (n & (n - 1)) === 0);
+const isPowerOfTwo = n => n === 0 ? false : (n & n - 1) === 0;
 // Solution 9
-const isPowerOfTwo = n => (n === 1 ? true : n < 1 ? false : isPowerOfTwo(n / 2));
+const isPowerOfTwo = n => n === 1 ? true : n < 1 ? false : isPowerOfTwo(n / 2);
 ```
 #### [Difference Of Squares](https://www.codewars.com/kata//558f9f51e85b46e9fa000025)
 ```javascript
