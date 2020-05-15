@@ -596,14 +596,9 @@ const final_Grade = (exam, projects) =>
 #### [L1: Set Alarm](https://www.codewars.com/kata//568dcc3c7f12767a62000038)
 ```javascript
 // Solution 1
-const setAlarm = (employed, vacation) => {
-  if (employed === true && vacation === false) return true;
-  return false;
-};
-// Solution 2
 const setAlarm = (employed, vacation) =>
-  employed === true && vacation === false ? true : false;
-// Solution 3
+  employed === true && vacation === false;
+// Solution 2
 const setAlarm = (employed, vacation) => employed && !vacation;
 ```
 #### [Is this a triangle?](https://www.codewars.com/kata//56606694ec01347ce800001b)
