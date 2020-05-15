@@ -1254,3 +1254,9 @@ const findNextSquare = sq =>
     ? Math.pow(Math.sqrt(sq) + 1, 2)
     : -1;
 ```
+#### Santa's Naughty List
+```javascript
+const findChildren = (santasList, children) => [
+  ...new Set(children.filter(el => santasList.includes(el)).sort()),
+];
+```
