@@ -1309,3 +1309,31 @@ const dutyFree = (normPrice, discount, hol) =>
 const dutyFree = (normPrice, discount, hol) =>
   (hol / normPrice / discount) * 100 | 0;
 ```
+#### [All Star Code Challenge #22]()
+```javascript
+// Solution 1
+const toTime = (seconds, hr = seconds / 3600, min = (hr - parseInt(hr)) * 60) =>
+  `${Math.floor(hr)} hour(s) and ${Math.floor(min)} minute(s)`;
+// Solution 2
+const toTime = (seconds, hr = seconds / 3600, min = (seconds % 3600) / 60) =>
+  `${Math.floor(hr)} hour(s) and ${Math.floor(min)} minute(s)`;
+// Solution 3
+const toTime = (seconds, hr = seconds / 3600, min = (seconds % 3600) / 60) =>
+  `${Math.trunc(hr)} hour(s) and ${Math.trunc(min)} minute(s)`;
+// Solution 4
+const toTime = (seconds, min = seconds / 60 | 0, hr = min / 60 | 0) =>
+  `${hr} hour(s) and ${min - hr * 60} minute(s)`;
+// Solution 5
+const toTime = seconds =>
+  `${Math.floor(seconds / 3600)} hour(s) and ${Math.floor(
+    (seconds % 3600) / 60
+  )} minute(s)`;
+// Solution 6
+const toTime = seconds =>
+  `${seconds / 3600 | 0} hour(s) and ${
+    (seconds % 3600) / 60 | 0
+  } minute(s)`;
+// Solution 7
+const toTime = seconds =>
+  `${seconds / 3600 | 0} hour(s) and ${(seconds / 60) % 60 | 0} minute(s)`;
+```
