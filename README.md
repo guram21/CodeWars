@@ -1350,3 +1350,24 @@ const twoDecimalPlaces = number => (number * 100 | 0) / 100;
 // Solution 5
 const twoDecimalPlaces = number => ~~(number * 100) / 100;
 ```
+#### [Tortoise racing](https://www.codewars.com/kata//55e2adece53b4cdcb900006c)
+```javascript
+// Solution 1
+const race = (v1, v2, g, t) =>
+  v1 >= v2
+    ? null
+    : ((t = new Date((g / (v2 - v1)) * 3600 * 1000)),
+    [t.getHours(), t.getMinutes(), t.getSeconds()]);
+// Solution 2
+const race = (v1, v2, g, t = g / (v2 - v1)) =>
+  v1 >= v2 ? null : [t | 0, (t * 60) % 60 | 0, Math.trunc(t * 3600) % 60];
+// Solution 3
+const race = (v1, v2, g, t = g / (v2 - v1)) =>
+  t >= 0 ? [t, (t * 60) % 60, (t * 3600) % 60].map(Math.floor) : null;
+// Solution 4
+const race = (v1, v2, g, t = g / (v2 - v1)) =>
+  t >= 0 ? [~~t, ~~((t * 60) % 60), ~~((t * 60 ** 2) % 60)] : null;
+// Solution 5
+const race = (v1, v2, g, t = g / (v2 - v1)) =>
+  t >= 0 ? [t | 0, (t * 60 | 0) % 60, (t * 3600 | 0) % 60] : null;
+```
