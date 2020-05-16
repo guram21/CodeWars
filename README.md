@@ -1337,3 +1337,16 @@ const toTime = seconds =>
 const toTime = seconds =>
   `${seconds / 3600 | 0} hour(s) and ${(seconds / 60) % 60 | 0} minute(s)`;
 ```
+#### [Formatting decimal places #1](https://www.codewars.com/kata//5641c3f809bf31f008000042)
+```javascript
+// Solution 1
+const twoDecimalPlaces = number => +number.toFixed(4).slice(0, -2);
+// Solution 2
+const twoDecimalPlaces = number => Math.trunc(number * 100) / 100;
+// Solution 3
+const twoDecimalPlaces = number => parseInt(number * 100) / 100;
+// Solution 4
+const twoDecimalPlaces = number => (number * 100 | 0) / 100;
+// Solution 5
+const twoDecimalPlaces = number => ~~(number * 100) / 100;
+```
