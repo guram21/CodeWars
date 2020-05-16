@@ -1288,3 +1288,24 @@ const mango = (quantity, price) => price * (quantity - Math.floor(quantity / 3))
 // Solution 2
 const mango = (quantity, price) => price * (quantity - (quantity / 3 | 0));
 ```
+#### [Holiday VIII - Duty Free](https://www.codewars.com/kata//57e92e91b63b6cbac20001e5)
+```javascript
+// Solution 1
+const dutyFree = (normPrice, discount, hol) =>
+  Math.floor((hol * 100) / (normPrice * discount));
+// Solution 2
+const dutyFree = (normPrice, discount, hol) =>
+  Math.floor(hol / ((normPrice * discount) / 100));
+// Solution 3
+const dutyFree = (normPrice, discount, hol) =>
+  Math.floor((hol / normPrice / discount) * 100);
+// Solution 4
+const dutyFree = (normPrice, discount, hol) =>
+  hol / ((normPrice * discount) / 100) ^ 0;
+// Solution 5
+const dutyFree = (normPrice, discount, hol) =>
+  ~~((100 * hol) / normPrice / discount);
+// Solution 6
+const dutyFree = (normPrice, discount, hol) =>
+  (hol / normPrice / discount) * 100 | 0;
+```
