@@ -1398,3 +1398,15 @@ const pipeFix = numbers => {
   return arr;
 };
 ```
+#### [Expressions Matter](https://www.codewars.com/kata//5ae62fcf252e66d44d00008e)
+```javascript
+const expressionMatter = (a, b, c) =>
+  Math.max(
+    a + b + c,
+    a * b * c,
+    a + b * c,
+    (a + b) * c,
+    a * b + c,
+    a * (b + c)
+  );
+```
