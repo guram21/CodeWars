@@ -1435,3 +1435,7 @@ const getAge = inputString => parseInt(inputString, 10);
 ```javascript
 const hexToDec = h => parseInt(h, 16);
 ```
+#### [Bin to Decimal](https://www.codewars.com/kata//57a5c31ce298a7e6b7000334)
+```javascript
+const binToDec = bin => parseInt(bin, 2);
+```
