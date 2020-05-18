@@ -6,26 +6,26 @@ const multiply = (a, b) => a * b;
 #### [Draw stairs](https://www.codewars.com/kata//5b4e779c578c6a898e0005c5)
 ```javascript
 // Solution 1
-const drawStairs = n => {
+const drawStairs = num => {
   let res = '';
-  for (let i = 1; i <= n; i++) {
-    res += i === n ? 'I' : 'I\n' + ' '.repeat(i);
+  for (let i = 1; i <= num; i++) {
+    res += i === num ? 'I' : 'I\n' + ' '.repeat(i);
   }
   return res;
 };
 // Solution 2
-const drawStairs = n => {
+const drawStairs = num => {
   let stairs = '',
     space = ' ';
-  for (let i = 0; i < n - 1; i++) {
+  for (let i = 0; i < num - 1; i++) {
     stairs += 'I\n' + space;
     space += ' ';
   }
   return stairs + 'I';
 };
 // Solution 3
-const drawStairs = n =>
-  [...Array(n)].map((_, i) => ' '.repeat(i) + 'I').join('\n');
+const drawStairs = num =>
+  [...Array(num)].map((_, i) => ' '.repeat(i) + 'I').join('\n');
 ```
 #### [A wolf in sheep's clothing](https://www.codewars.com/kata//5c8bfa44b9d1192e1ebd3d15)
 ```javascript
@@ -39,7 +39,7 @@ const warnTheSheep = q => {
 ```
 #### [I love you, a little, a lot, passionately ... not at all](https://www.codewars.com/kata//57f24e6a18e9fad8eb000296)
 ```javascript
-const howMuchILoveYou = n => {
+const howMuchILoveYou = num => {
   const fl = [
     'I love you',
     'a little',
@@ -48,7 +48,7 @@ const howMuchILoveYou = n => {
     'madly',
     'not at all'
   ];
-  return fl[(n - 1) % 6];
+  return fl[(num - 1) % 6];
 };
 ```
 #### [Complementary DNA](https://www.codewars.com/kata//554e4a2f232cdd87d9000038)
@@ -154,7 +154,7 @@ const otherAngle = (a, b) => 180 - (a + b);
 ```
 #### [Sum of angles](https://www.codewars.com/kata//5a03b3f6a1c9040084001765)
 ```javascript
-const angle = n => 180 * (n - 2);
+const angle = num => 180 * (num - 2);
 ```
 #### [Breaking chocolate problem](https://www.codewars.com/kata//534ea96ebb17181947000ada)
 ```javascript
@@ -168,20 +168,19 @@ const iceBrickVolume = (radius, bottleLength, rimLength) =>
 #### [Simple multiplication](https://www.codewars.com/kata//583710ccaa6717322c000105)
 ```javascript
 // Solution 1
-const simpleMultiplication = number => number * (8 + (number % 2));
+const simpleMultiplication = num => num * (8 + (num % 2));
 // Solution 2
-const simpleMultiplication = number => number * (8 + (number & 1));
+const simpleMultiplication = num => num * (8 + (num & 1));
 // Solution 3
-const simpleMultiplication = number => number * (number % 2 ? 9 : 8);
+const simpleMultiplication = num => num * (num % 2 ? 9 : 8);
 // Solution 4
-const simpleMultiplication = number => number * (8 + (number % 2 != 0));
+const simpleMultiplication = num => num * (8 + (num % 2 != 0));
 // Solution 5
-const simpleMultiplication = number => (number % 2 ? number * 9 : number * 8);
+const simpleMultiplication = num => (num % 2 ? num * 9 : num * 8);
 // Solution 6
-const simpleMultiplication = number => (number << 3) + (number & 1) * number;
+const simpleMultiplication = num => (num << 3) + (num & 1) * num;
 // Solution 7
-const simpleMultiplication = number =>
-  !(number % 2) ? number * 8 : number * 9;
+const simpleMultiplication = num =>!(num % 2) ? num * 8 : num * 9;
 ```
 #### [DNA to RNA Conversion](https://www.codewars.com/kata//5556282156230d0e5e000089)
 ```javascript
@@ -288,7 +287,7 @@ const discoverOriginalPrice = (discountedPrice, salePercentage) =>
 ```
 #### [Formatting decimal places #0](https://www.codewars.com/kata//5641a03210e973055a00000d)
 ```javascript
-const twoDecimalPlaces = n => +n.toFixed(2);
+const twoDecimalPlaces = num => +num.toFixed(2);
 ```
 #### [How many times should I go?](https://www.codewars.com/kata//57efcb78e77282f4790003d8)
 ```javascript
@@ -301,7 +300,7 @@ const closestMultiple10 = num => Math.round(num / 10) * 10;
 ```
 #### [Count Odd Numbers below n](https://www.codewars.com/kata//59342039eb450e39970000a6)
 ```javascript
-const oddCount = n => Math.floor(n / 2);
+const oddCount = num => Math.floor(num / 2);
 ```
 #### [Century From Year](https://www.codewars.com/kata//5a3fe3dde1ce0e8ed6000097)
 ```javascript
@@ -316,7 +315,7 @@ const squareArea = A => +Math.pow((2 * A) / Math.PI, 2).toFixed(2);
 ```
 #### [Keep up the hoop](https://www.codewars.com/kata//55cb632c1a5d7b3ad0000145)
 ```javascript
-const hoopCount = n => n >= 10 ? 'Great, now move on to tricks' : 'Keep at it until you get it';
+const hoopCount = num => num >= 10 ? 'Great, now move on to tricks' : 'Keep at it until you get it';
 ```
 #### [Simple Comparison?](https://www.codewars.com/kata//57f6ecdfcca6e045d2001207)
 ```javascript
@@ -347,21 +346,21 @@ const hero = (bullets, dragons) => bullets >> 1 >= dragons;
 #### [Even or Odd](https://www.codewars.com/kata//53da3dbb4a5168369a0000fe)
 ```javascript
 // Solution 1
-const even_or_odd = number => ['Even', 'Odd'][number % 2];
+const even_or_odd = num => ['Even', 'Odd'][num % 2];
 // Solution 2
-const even_or_odd = number => ['Even', 'Odd'][number & 1];
+const even_or_odd = num => ['Even', 'Odd'][num & 1];
 // Solution 3
-const even_or_odd = number => (number % 2 ? 'Odd' : 'Even');
+const even_or_odd = num => (num % 2 ? 'Odd' : 'Even');
 // Solution 4
-const even_or_odd = number => (number & 1 ? 'Odd' : 'Even');
+const even_or_odd = num => (num & 1 ? 'Odd' : 'Even');
 // Solution 5
-const even_or_odd = number => ['Even', 'Odd'][!(number % 2)];
+const even_or_odd = num => ['Even', 'Odd'][!(num % 2)];
 // Solution 6
-const even_or_odd = number => (!(number % 2) ? 'Even' : 'Odd');
+const even_or_odd = num => (!(num % 2) ? 'Even' : 'Odd');
 // Solution 7
-const even_or_odd = number => ['Even', 'Odd'][Math.abs(number) % 2];
+const even_or_odd = num => ['Even', 'Odd'][Math.abs(num) % 2];
 // Solution 8
-const even_or_odd = number => (Math.abs(number) % 2 ? 'Odd' : 'Even');
+const even_or_odd = num => (Math.abs(num) % 2 ? 'Odd' : 'Even');
 ```
 #### [Calculate BMI](https://www.codewars.com/kata//57a429e253ba3381850000fb)
 ```javascript
@@ -395,9 +394,9 @@ const bmi = (weight, height, bmi = weight / height ** 2) =>
 #### [What's the real floor?](https://www.codewars.com/kata//574b3b1599d8f897470018f6)
 ```javascript
 // Solution 1
-const getRealFloor = n => (n <= 0 ? n : n - (n >= 13 ? 2 : 1));
+const getRealFloor = num => (num <= 0 ? num : num - (num >= 13 ? 2 : 1));
 // Solution 2
-const getRealFloor = n => (n <= 0 ? n : n < 13 ? n - 1 : n - 2);
+const getRealFloor = num => (num <= 0 ? num : num < 13 ? num - 1 : num - 2);
 ```
 #### [Determine offspring sex based on genes XX and XY chromosomes](https://www.codewars.com/kata//56530b444e831334c0000020)
 ```javascript
@@ -572,7 +571,7 @@ const rps = (p1, p2) =>
 ```
 #### [Can we divide it?](https://www.codewars.com/kata//5a2b703dc5e2845c0900005a)
 ```javascript
-const isDivideBy = (number, a, b) => number % a === 0 && number % b === 0;
+const isDivideBy = (num, a, b) => num % a === 0 && num % b === 0;
 ```
 #### [Student's Final Grade](https://www.codewars.com/kata//5ad0d8356165e63c140014d4)
 ```javascript
@@ -646,21 +645,21 @@ const dogs = [
   '101 DALMATIANS!!!'
 ];
 // Solution 2
-const howManyDalmatians = number =>
-  number <= 10
+const howManyDalmatians = num =>
+  num <= 10
     ? dogs[0]
-    : number <= 50
+    : num <= 50
     ? dogs[1]
-    : number <= 100
+    : num <= 100
     ? dogs[2]
     : dogs[3];
 ```
 #### [Training JS #7: if..else and ternary operator](https://www.codewars.com/kata//57202aefe8d6c514300001fd)
 ```javascript
 // Solution 1
-const saleHotdogs = n => (n < 5 ? n * 100 : n >= 5 && n < 10 ? n * 95 : n * 90);
+const saleHotdogs = num => (num < 5 ? num * 100 : num >= 5 && num < 10 ? num * 95 : num * 90);
 // Solution 2
-const saleHotdogs = n => n * (n < 5 ? 100 : n < 10 ? 95 : 90);
+const saleHotdogs = num => num * (num < 5 ? 100 : num < 10 ? 95 : 90);
 ```
 #### [Be Concise I - The Ternary Operator](https://www.codewars.com/kata//56f3f6a82010832b02000f38)
 ```javascript
@@ -727,7 +726,7 @@ const calculator = (a, b, sign) => {
 #### [Switch it Up!](https://www.codewars.com/kata//5808dcb8f0ed42ae34000031)
 ```javascript
 // Solution 1
-const switchItUp = number =>
+const switchItUp = num =>
   [
     'Zero',
     'One',
@@ -739,12 +738,12 @@ const switchItUp = number =>
     'Seven',
     'Eight',
     'Nine'
-  ][number];
+  ][num];
 // Solution 2
-const switchItUp = number =>
-  'Zero One Two Three Four Five Six Seven Eight Nine'.split(' ')[number];
+const switchItUp = num =>
+  'Zero One Two Three Four Five Six Seven Eight Nine'.split(' ')[num];
 // Solution 2
-const switchItUp = number => {
+const switchItUp = num => {
   const words = [
     'Zero',
     'One',
@@ -757,11 +756,11 @@ const switchItUp = number => {
     'Eight',
     'Nine'
   ];
-  return words[number];
+  return words[num];
 };
 // Solution 3
-const switchItUp = number => {
-  switch (number) {
+const switchItUp = num => {
+  switch (num) {
     case 0:
       return 'Zero';
     case 1:
@@ -785,7 +784,7 @@ const switchItUp = number => {
   }
 };
 // Solution 4
-const switchItUp = number => {
+const switchItUp = num => {
   return {
     0: 'Zero',
     1: 'One',
@@ -797,95 +796,95 @@ const switchItUp = number => {
     7: 'Seven',
     8: 'Eight',
     9: 'Nine'
-  }[number];
+  }[num];
 };
 // Solution 5
-const switchItUp = number =>
-  number === 1
+const switchItUp = num =>
+  num === 1
     ? 'One'
-    : number === 2
+    : num === 2
     ? 'Two'
-    : number === 3
+    : num === 3
     ? 'Three'
-    : number === 4
+    : num === 4
     ? 'Four'
-    : number === 5
+    : num === 5
     ? 'Five'
-    : number === 6
+    : num === 6
     ? 'Six'
-    : number === 7
+    : num === 7
     ? 'Seven'
-    : number === 8
+    : num === 8
     ? 'Eight'
-    : number === 9
+    : num === 9
     ? 'Nine'
-    : number === 0
+    : num === 0
     ? 'Zero'
     : '0-9 only!';
 ```
 #### [No zeros for heros](https://www.codewars.com/kata//570a6a46455d08ff8d001002)
 ```javascript
 // Solution 1
-const noBoringZeros = n => {
-  while (n % 10 === 0 && n !== 0) {
-    n = n / 10;
+const noBoringZeros = num => {
+  while (num % 10 === 0 && num !== 0) {
+    num = num / 10;
   }
-  return n;
+  return num;
 };
 // Solution 2
-const noBoringZeros = n => +`${n}`.replace(/0+$/, '');
+const noBoringZeros = num => +`${num}`.replace(/0+$/, '');
 // Solution 3
-const noBoringZeros = n => +(n + '').replace(/0*$/, '');
+const noBoringZeros = num => +(num + '').replace(/0*$/, '');
 // Solution 4
-const noBoringZeros = n => +String(n).replace(/[0]+$/g, '');
+const noBoringZeros = num => +String(num).replace(/[0]+$/g, '');
 // Solution 5
-const noBoringZeros = n => Number(n.toString().replace(/0+$/g, ''));
+const noBoringZeros = num => Number(num.toString().replace(/0+$/g, ''));
 // Solution 6
-const noBoringZeros = n => (!n || n % 10 ? n : noBoringZeros(n / 10));
+const noBoringZeros = num => (!num || num % 10 ? num : noBoringZeros(num / 10));
 // Solution 7
-const noBoringZeros = n => (n % 10 || n === 0 ? n : noBoringZeros(n / 10));
+const noBoringZeros = num => (num % 10 || num === 0 ? num : noBoringZeros(num / 10));
 ```
 #### [Power of two](https://www.codewars.com/kata//534d0a229345375d520006a0)
 ```javascript
 // Solution 1
-const isPowerOfTwo = n => {
-  while (n % 2 === 0 && n !== 0) {
-    n /= 2;
+const isPowerOfTwo = num => {
+  while (num % 2 === 0 && num !== 0) {
+    num /= 2;
   }
-  return n === 1;
+  return num === 1;
 };
 // Solution 2
-const isPowerOfTwo = n => !(n & n - 1);
+const isPowerOfTwo = num => !(num & num - 1);
 // Solution 3
-const isPowerOfTwo = n => (n & n - 1) === 0;
+const isPowerOfTwo = num => (num & num - 1) === 0;
 // Solution 4
-const isPowerOfTwo = n => (n & ~n + 1) === n;
+const isPowerOfTwo = num => (num & ~num + 1) === num;
 // Solution 5
-const isPowerOfTwo = n => Math.log2(n) % 1 === 0;
+const isPowerOfTwo = num => Math.log2(num) % 1 === 0;
 // Solution 6
-const isPowerOfTwo = n => /^10*$/.test(n.toString(2));
+const isPowerOfTwo = num => /^10*$/.test(num.toString(2));
 // Solution 7
-const isPowerOfTwo = n => Number.isInteger(Math.log2(n));
+const isPowerOfTwo = num => Number.isInteger(Math.log2(num));
 // Solution 8
-const isPowerOfTwo = n => n === 0 ? false : (n & n - 1) === 0;
+const isPowerOfTwo = num => num === 0 ? false : (num & num - 1) === 0;
 // Solution 9
-const isPowerOfTwo = n => n === 1 ? true : n < 1 ? false : isPowerOfTwo(n / 2);
+const isPowerOfTwo = num => num === 1 ? true : num < 1 ? false : isPowerOfTwo(num / 2);
 ```
 #### [Difference Of Squares](https://www.codewars.com/kata//558f9f51e85b46e9fa000025)
 ```javascript
 // Solution 1
-const differenceOfSquares = x => x * (x * x - 1) * (3 * x + 2) / 12;
+const differenceOfSquares = num => num * (num * num - 1) * (3 * num + 2) / 12;
 // Solution 2
-const differenceOfSquares = x => Math.pow(x * (x + 1) / 2, 2) - x * (x + 1) * (2 * x + 1) / 6;
+const differenceOfSquares = num => Math.pow(num * (num + 1) / 2, 2) - num * (num + 1) * (2 * num + 1) / 6;
 // Solution 
-const differenceOfSquares = n => n * n * (n + 1) * (n + 1) / 4 - n * (n + 1) * (2 * n + 1) / 6;
+const differenceOfSquares = num => num * num * (num + 1) * (num + 1) / 4 - num * (num + 1) * (2 * num + 1) / 6;
 // Solution 4
-const differenceOfSquares = n => {
+const differenceOfSquares = num => {
   let sum = 0, sumSquares = 0;
-    while (n > 0) {
-    sum += n;
-    sumSquares += Math.pow(n, 2);
-    n--;
+    while (num > 0) {
+    sum += num;
+    sumSquares += Math.pow(num, 2);
+    num--;
   }
   let squareSum = Math.pow(sum, 2)
   return squareSum - sumSquares;
@@ -893,7 +892,7 @@ const differenceOfSquares = n => {
 ```
 #### [Factorial](https://www.codewars.com/kata//57a049e253ba33ac5e000212)
 ```javascript
-const factorial = n => n > 1 ? n * factorial(--n) : 1;
+const factorial = num => num > 1 ? num * factorial(--num) : 1;
 ```
 #### [Powers of 3](https://www.codewars.com/kata//57be674b93687de78c0001d9)
 ```javascript
@@ -988,9 +987,9 @@ const getSum = (a, b) => {
 ```
 #### [Sum of the first nth term of Series](https://www.codewars.com/kata//555eded1ad94b00403000071)
 ```javascript
-const SeriesSum = n => {
+const SeriesSum = num => {
   let sum = 0;
-  for (let i = 0; i < n; i++) {
+  for (let i = 0; i < num; i++) {
     sum += 1 / (1 + i * 3);
   }
   return sum.toFixed(2);
@@ -1107,23 +1106,23 @@ const getPlanetName = id => {
 #### [Power](https://www.codewars.com/kata//562926c855ca9fdc4800005b)
 ```javascript
 // Solution 1
-const numberToPower = (number, power) => {
+const numberToPower = (num, pow) => {
   let sum = 1;
-  for (let i = 1; i <= power; i++) sum *= number;
+  for (let i = 1; i <= pow; i++) sum *= num;
   return sum;
 };
 // Solution 2
-const numberToPower = (number, power) =>
-  power > 0 ? number * numberToPower(number, power - 1) : 1;
+const numberToPower = (num, pow) =>
+  pow > 0 ? num * numberToPower(num, pow - 1) : 1;
 // Solution 3
-const numberToPower = (number, power) =>
-  Array(power)
-    .fill(number)
+const numberToPower = (num, pow) =>
+  Array(pow)
+    .fill(num)
     .reduce((res, n) => res * n, 1);
 ```
 #### [Is it a palindrome?](https://www.codewars.com/kata//57a1fd2ce298a731b20006a4)
 ```javascript
-const isPalindrome = x => (x = x.toLowerCase()) === x.split('').reverse().join('');
+const isPalindrome = str => (str = str.toLowerCase()) === str.split('').reverse().join('');
 ```
 #### [isReallyNaN](https://www.codewars.com/kata//56c24c58e0c0f741d4001aef)
 ```javascript
@@ -1149,7 +1148,7 @@ const FilterString = value => +value.replace(/\D/g, '');
 ```
 #### [Is integer safe to use?](https://www.codewars.com/kata//55a4f9afeffe4231090000d6)
 ```javascript
-const SafeInteger = n => Number.isSafeInteger(n);
+const SafeInteger = num => Number.isSafeInteger(num);
 ```
 #### [Return Negative](https://www.codewars.com/kata//55685cd7ad70877c23000102)
 ```javascript
@@ -1160,7 +1159,7 @@ const makeNegative = num => -Math.abs(num);
 ```
 #### [Opposite number](https://www.codewars.com/kata//56dec885c54a926dcd001095)
 ```javascript
-const opposite = number => -number;
+const opposite = num => -num;
 ```
 #### [Invert values](https://www.codewars.com/kata//5899dc03bc95b1bf1b0000ad)
 ```javascript
@@ -1340,15 +1339,15 @@ const toTime = seconds =>
 #### [Formatting decimal places #1](https://www.codewars.com/kata//5641c3f809bf31f008000042)
 ```javascript
 // Solution 1
-const twoDecimalPlaces = number => +number.toFixed(4).slice(0, -2);
+const twoDecimalPlaces = num => +num.toFixed(4).slice(0, -2);
 // Solution 2
-const twoDecimalPlaces = number => Math.trunc(number * 100) / 100;
+const twoDecimalPlaces = num => Math.trunc(num * 100) / 100;
 // Solution 3
-const twoDecimalPlaces = number => parseInt(number * 100) / 100;
+const twoDecimalPlaces = num => parseInt(num * 100) / 100;
 // Solution 4
-const twoDecimalPlaces = number => (number * 100 | 0) / 100;
+const twoDecimalPlaces = num => (num * 100 | 0) / 100;
 // Solution 5
-const twoDecimalPlaces = number => ~~(number * 100) / 100;
+const twoDecimalPlaces = num => ~~(num * 100) / 100;
 ```
 #### [Tortoise racing](https://www.codewars.com/kata//55e2adece53b4cdcb900006c)
 ```javascript
@@ -1374,25 +1373,25 @@ const race = (v1, v2, g, t = g / (v2 - v1)) =>
 #### [Lario and Muigi Pipe Problem](https://www.codewars.com/kata//56b29582461215098d00000f)
 ```javascript
 // Solution 1
-const pipeFix = numbers => {
+const pipeFix = num => {
   const arr = [];
-  for (let i = Math.min(...numbers); i <= Math.max(...numbers); i++) {
+  for (let i = Math.min(...num); i <= Math.max(...num); i++) {
     arr.push(i);
   }
   return arr;
 };
 // Solution 2
-const pipeFix = numbers => {
+const pipeFix = num => {
   const arr = [];
-  for (let i = numbers[0]; i <= Math.max(...numbers); i++) {
+  for (let i = num[0]; i <= Math.max(...num); i++) {
     arr.push(i);
   }
   return arr;
 };
 // Solution 3
-const pipeFix = numbers => {
+const pipeFix = num => {
   const arr = [];
-  for (let i = numbers[0]; i <= numbers[numbers.length - 1]; i++) {
+  for (let i = num[0]; i <= num[num.length - 1]; i++) {
     arr.push(i);
   }
   return arr;
@@ -1412,7 +1411,7 @@ const expressionMatter = (a, b, c) =>
 ```
 #### [Convert to Binary](https://www.codewars.com/kata//59fca81a5712f9fa4700159a)
 ```javascript
-const toBinary = n => +n.toString(2);
+const toBinary = num => +num.toString(2);
 ```
 #### [Binary Addition](https://www.codewars.com/kata//551f37452ff852b7bd000139)
 ```javascript
@@ -1453,16 +1452,16 @@ const parseF = s => isNaN(s = parseFloat(s)) ? null : s;
 #### [Sum Arrays](https://www.codewars.com/kata//53dc54212259ed3d4f00071c)
 ```javascript
 // Solution 1
-const sum = numbers => {
+const sum = num => {
   'use strict';
   let sum = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
+  for (let i = 0; i < num.length; i++) {
+    sum += num[i];
   }
   return sum;
 };
 // Solution 2
-const sum = numbers => numbers.reduce((acc, curr) => acc + curr, 0);
+const sum = num => num.reduce((acc, curr) => acc + curr, 0);
 ```
 #### [Count the Monkeys!](https://www.codewars.com/kata//56f69d9f9400f508fb000ba7)
 ```javascript
