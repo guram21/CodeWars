@@ -1464,3 +1464,26 @@ const sum = numbers => {
 // Solution 2
 const sum = numbers => numbers.reduce((acc, curr) => acc + curr, 0);
 ```
+#### [Count the Monkeys!](https://www.codewars.com/kata//56f69d9f9400f508fb000ba7)
+```javascript
+// Solution 1
+const monkeyCount = num => {
+  const arr = [];
+  for (let i = 1; i <= num; i++) {
+    arr.push(i);
+  }
+  return arr;
+};
+// Solution 2
+const monkeyCount = num => [...Array(++num).keys()].slice(1);
+// Solution 3
+const monkeyCount = num => [...Array(num)].map((_, i) => ++i);
+// Solution 4
+const monkeyCount = num => [...Array(num).keys()].map(i => ++i);
+// Solution 5
+const monkeyCount = num => Array(num).fill().map((_, i) => ++i);
+// Solution 6
+const monkeyCount = num => Array.from(Array(++num).keys()).slice(1);
+// Solution 7
+const monkeyCount = num => [...new Array(++num).keys()].filter(i => i > 0);
+```
