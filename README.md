@@ -1418,3 +1418,12 @@ const toBinary = n => +n.toString(2);
 ```javascript
 const addBinary = (a, b) => (a + b).toString(2);
 ```
+#### [Calculate Price Excluding VAT](https://www.codewars.com/kata//5890d8bc9f0f422cf200006b)
+```javascript
+// Solution 1
+const excludingVatPrice = price =>
+  price === null ? -1 : +(price / 1.15).toFixed(2);
+// Solution 2
+const excludingVatPrice = price =>
+  price !== null ? +(price / 1.15).toFixed(2) : -1;
+```
