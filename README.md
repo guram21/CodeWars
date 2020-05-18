@@ -1439,3 +1439,15 @@ const hexToDec = h => parseInt(h, 16);
 ```javascript
 const binToDec = bin => parseInt(bin, 2);
 ```
+#### [Parse float](https://www.codewars.com/kata//57a386117cb1f31890000039)
+```javascript
+// Soliution 1
+const parseF = s => !isNaN(parseFloat(s)) ? parseFloat(s) : null;
+// Soliution 2
+const parseF = s => isNaN(parseFloat(s)) ? null : parseFloat(s);
+// Soliution 3
+const parseF = s => !isNaN(s = parseFloat(s)) ? s : null;
+// Soliution 4
+const parseF = s => isNaN(s = parseFloat(s)) ? null : s;
+```
+
