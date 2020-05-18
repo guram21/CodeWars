@@ -168,19 +168,19 @@ const iceBrickVolume = (radius, bottleLength, rimLength) =>
 #### [Simple multiplication](https://www.codewars.com/kata//583710ccaa6717322c000105)
 ```javascript
 // Solution 1
-const simpleMultiplication = num => num * (8 + (num % 2));
+const simpleMultiplication = num => num * (8 + num % 2);
 // Solution 2
 const simpleMultiplication = num => num * (8 + (num & 1));
 // Solution 3
 const simpleMultiplication = num => num * (num % 2 ? 9 : 8);
 // Solution 4
-const simpleMultiplication = num => num * (8 + (num % 2 != 0));
+const simpleMultiplication = num => num * (8 + (num % 2 !== 0));
 // Solution 5
-const simpleMultiplication = num => (num % 2 ? num * 9 : num * 8);
+const simpleMultiplication = num => num % 2 ? num * 9 : num * 8;
 // Solution 6
 const simpleMultiplication = num => (num << 3) + (num & 1) * num;
 // Solution 7
-const simpleMultiplication = num =>!(num % 2) ? num * 8 : num * 9;
+const simpleMultiplication = num => !(num % 2) ? num * 8 : num * 9;
 ```
 #### [DNA to RNA Conversion](https://www.codewars.com/kata//5556282156230d0e5e000089)
 ```javascript
