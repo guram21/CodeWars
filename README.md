@@ -1431,3 +1431,7 @@ const excludingVatPrice = price =>
 ```javascript
 const getAge = inputString => parseInt(inputString, 10);
 ```
+#### [Hex to Decimal](https://www.codewars.com/kata//57a4d500e298a7952100035d)
+```javascript
+const hexToDec = h => parseInt(h, 16);
+```
