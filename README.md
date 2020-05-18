@@ -1118,7 +1118,7 @@ const numberToPower = (num, pow) =>
 const numberToPower = (num, pow) =>
   Array(pow)
     .fill(num)
-    .reduce((res, n) => res * n, 1);
+    .reduce((acc, curr) => acc * curr, 1);
 ```
 #### [Is it a palindrome?](https://www.codewars.com/kata//57a1fd2ce298a731b20006a4)
 ```javascript
