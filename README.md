@@ -663,7 +663,7 @@ const saleHotdogs = num => num * (num < 5 ? 100 : num < 10 ? 95 : 90);
 ```
 #### [Be Concise I - The Ternary Operator](https://www.codewars.com/kata//56f3f6a82010832b02000f38)
 ```javascript
-const describeAge = age => `You're a(n) ${age <= 12 ? 'kid' : age >= 13 && age <= 17 ? 'teenager' : age >= 18 && age <= 64 ? 'adult' : 'elderly'}`;
+const describeAge = a => `You're a(n) ${a < 13 ? 'kid' : a < 18 ? 'teenager' : a < 65 ? 'adult' : 'elderly'}`;
 ```
 #### [Basic Mathematical Operations](https://www.codewars.com/kata//57356c55867b9b7a60000bd7)
 ```javascript
