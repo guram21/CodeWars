@@ -1487,3 +1487,22 @@ const monkeyCount = num => Array.from(Array(++num).keys()).slice(1);
 // Solution 7
 const monkeyCount = num => [...new Array(++num).keys()].filter(i => i > 0);
 ```
+#### [Filling an array (part 1)](https://www.codewars.com/kata//571d42206414b103dc0006a1)
+```javascript
+// Solution 1
+const arr = num => {
+  const arr = [];
+  for (let i = 0; i < num; i++) {
+    arr.push(i);
+  }
+  return arr;
+};
+// Solution 2
+const arr = num => [...Array(num || 0).keys()];
+// Solution 3
+const arr = (num = 0) => [...Array(num).keys()];
+// Solution 4
+const arr = num => num ? [...Array(num).keys()] : [];
+// Solution 5
+const arr = num => Array.from({ length: num }, (_, i) => i);
+```
