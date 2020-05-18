@@ -1450,4 +1450,17 @@ const parseF = s => !isNaN(s = parseFloat(s)) ? s : null;
 // Soliution 4
 const parseF = s => isNaN(s = parseFloat(s)) ? null : s;
 ```
-
+#### [Sum Arrays](https://www.codewars.com/kata//53dc54212259ed3d4f00071c)
+```javascript
+// Solution 1
+const sum = numbers => {
+  'use strict';
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
+};
+// Solution 2
+const sum = numbers => numbers.reduce((acc, curr) => acc + curr, 0);
+```
