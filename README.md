@@ -1427,3 +1427,7 @@ const excludingVatPrice = price =>
 const excludingVatPrice = price =>
   price !== null ? +(price / 1.15).toFixed(2) : -1;
 ```
+#### [Parse nice int from char problem](https://www.codewars.com/kata//557cd6882bfa3c8a9f0000c1)
+```javascript
+const getAge = inputString => parseInt(inputString, 10);
+```
