@@ -1371,3 +1371,30 @@ const race = (v1, v2, g, t = g / (v2 - v1)) =>
 const race = (v1, v2, g, t = g / (v2 - v1)) =>
   t >= 0 ? [t | 0, (t * 60 | 0) % 60, (t * 3600 | 0) % 60] : null;
 ```
+#### [Lario and Muigi Pipe Problem](https://www.codewars.com/kata//56b29582461215098d00000f)
+```javascript
+// Solution 1
+const pipeFix = numbers => {
+  const arr = [];
+  for (let i = Math.min(...numbers); i <= Math.max(...numbers); i++) {
+    arr.push(i);
+  }
+  return arr;
+};
+// Solution 2
+const pipeFix = numbers => {
+  const arr = [];
+  for (let i = numbers[0]; i <= Math.max(...numbers); i++) {
+    arr.push(i);
+  }
+  return arr;
+};
+// Solution 3
+const pipeFix = numbers => {
+  const arr = [];
+  for (let i = numbers[0]; i <= numbers[numbers.length - 1]; i++) {
+    arr.push(i);
+  }
+  return arr;
+};
+```
