@@ -1505,3 +1505,23 @@ const arr = num => num ? [...Array(num).keys()] : [];
 // Solution 5
 const arr = num => Array.from({ length: num }, (_, i) => i);
 ```
+#### [What is type of variable?](https://www.codewars.com/kata//57293671c98f77e84b000065)
+```javascript
+//Solution 1
+const type = value => ({}).toString.call(value).slice(8, -1).toLowerCase();
+//Solution 2
+const type = value =>
+  Object.prototype.toString.call(value).slice(8, -1).toLowerCase();
+//Solution 3
+const type = value =>
+  ({}).toString
+    .call(value)
+    .match(/\s([a-zA-Z]+)/)[1]
+    .toLowerCase();
+//Solution 4
+const type = value =>
+  ({}).toString
+    .call(value)
+    .match(/(\w+)]/)[1]
+    .toLowerCase();
+```
