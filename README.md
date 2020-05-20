@@ -1580,3 +1580,15 @@ const countSheeps = arrayOfSheeps => arrayOfSheeps.filter(el => el).length;
 const countSheeps = arrayOfSheeps =>
   !arrayOfSheeps ? 0 : arrayOfSheeps.reduce((acc, curr) => curr ? ++acc : acc, 0);
 ```
+#### [A Needle in the Haystack](https://www.codewars.com/kata//56676e8fabd2d1ff3000000c)
+```javascript
+// Solution 1
+const findNeedle = haystack =>
+  `found the needle at position ${haystack.indexOf('needle')}`;
+// Solution 2
+const findNeedle = haystack => {
+  for (let i = 0; i < haystack.length; i++) {
+    if (haystack[i] === 'needle') return `found the needle at position ${i}`;
+  }
+};
+```
