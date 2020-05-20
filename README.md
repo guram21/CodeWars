@@ -1557,3 +1557,26 @@ const include = (arr, item) => Boolean(~arr.indexOf(item));
 // Solution 10
 const include = (arr, item) => arr.find(el => el === item) === item;
 ```
+#### [Counting sheep...](https://www.codewars.com/kata//54edbc7200b811e956000556)
+```javascript
+// Solution 1
+const countSheeps = (arrayOfSheep, count = 0) => {
+  for (let i = 0; i < arrayOfSheep.length; i++)
+    if (arrayOfSheep[i] === true) count++;
+  return count;
+};
+// Solution 2
+const countSheeps = (arrayOfSheep, count = 0) => {
+  for (let i in arrayOfSheeps) {
+    arrayOfSheeps[i] ? count++ : null;
+  }
+  return count;
+};
+// Solution 3
+const countSheeps = arrayOfSheeps => arrayOfSheeps.filter(Boolean).length;
+// Solution 4
+const countSheeps = arrayOfSheeps => arrayOfSheeps.filter(el => el).length;
+// Solution 5
+const countSheeps = arrayOfSheeps =>
+  !arrayOfSheeps ? 0 : arrayOfSheeps.reduce((acc, curr) => curr ? ++acc : acc, 0);
+```
