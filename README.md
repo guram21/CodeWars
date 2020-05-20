@@ -1529,3 +1529,31 @@ const type = value =>
 ```javascript
 const arrCheck = value => value.every(Array.isArray);
 ```
+#### [Enumerable Magic #3 - Does My List Include This?](https://www.codewars.com/kata//545991b4cbae2a5fda000158)
+```javascript
+// Solution 1
+const include = (arr, item) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === item) return true;
+  }
+  return false;
+};
+// Solution 2
+const include = Array.includes;
+// Solution 3
+const include = (arr, item) => arr.includes(item);
+// Solution 4
+const include = (arr, item) => new Set(arr).has(item);
+// Solution 5
+const include = (arr, item) => arr.indexOf(item) > -1;
+// Solution 6
+const include = (arr, item) => arr.indexOf(item) >= 0;
+// Solution 7
+const include = (arr, item) => arr.indexOf(item) !== -1;
+// Solution 8
+const include = (arr, item) => arr.some(el => el === item);
+// Solution 9
+const include = (arr, item) => Boolean(~arr.indexOf(item));
+// Solution 10
+const include = (arr, item) => arr.find(el => el === item) === item;
+```
