@@ -1662,3 +1662,29 @@ const firstNonConsecutive = arr =>
       ? arr[1]
       : firstNonConsecutive(arr.slice(1));
 ```
+#### [Total amount of points](https://www.codewars.com/kata//5bb904724c47249b10000131)
+```javascript
+// Solution 1
+const points = games => {
+  let count = 0;
+  games.forEach(item => {
+    if (item[0] > item[2]) count += 3;
+    if (item[0] === item[2]) count++;
+  });
+  return count;
+};
+// Solution 2
+const points = games => {
+  let count = 0;
+  for (let i = 0; i < games.length; i++) {
+    if (games[i][0] > games[i][2]) count += 3;
+    if (games[i][0] === games[i][2]) count++;
+  }
+  return count;
+};
+// Solution 3
+const points = games =>
+  games.reduce((acc, curr) => {
+    return acc += curr[0] > curr[2] ? 3 : curr[0] === curr[2] ? 1 : 0;
+  }, 0);
+```
