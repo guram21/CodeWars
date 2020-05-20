@@ -1592,3 +1592,43 @@ const findNeedle = haystack => {
   }
 };
 ```
+#### [Difference of Volumes of Cuboids](https://www.codewars.com/kata//58cb43f4256836ed95000f97)
+```javascript
+// Solution 1
+const findDifference = (a, b) =>
+  Math.abs(
+    a.reduce((acc, curr) => acc * curr) - b.reduce((acc, curr) => acc * curr)
+  );
+// Solution 2
+const findDifference = (a, b) =>
+  Math.abs(a[0] * a[1] * a[2] - b[0] * b[1] * b[2]);
+// Solution 3
+var findDifference = (a, b) => (
+  (c = (a, b) => a * b), Math.abs(a.reduce(c) - b.reduce(c))
+);
+// Solution 3
+const findDifference = (a, b) =>
+  Math.abs(
+    a.reduce((acc, curr) => acc * curr) - b.reduce((acc, curr) => acc * curr)
+  );
+// Solution 4
+var findDifference = (a, b, A = 1, B = 1) => {
+  a.map(el => A *= el);
+  b.map(el => B *= el);
+  return Math.abs(A - B);
+};
+// Solution 5
+const findDifference = (a, b) => {
+  let A = a.reduce((acc, curr) => acc * curr);
+  let B = b.reduce((acc, curr) => acc * curr);
+  return Math.abs(A - B);
+};
+// Solution 6
+const findDifference = (a, b, A = 1, B = 1) => {
+  for (let i = 0; i < 3; i++) {
+    A *= a[i];
+    B *= b[i];
+  }
+  return Math.abs(A - B);
+};
+```
