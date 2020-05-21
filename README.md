@@ -1250,9 +1250,25 @@ const findNextSquare = sq =>
 ```
 #### [Santa's Naughty List](https://www.codewars.com/kata//5a0b4dc2ffe75f72f70000ef)
 ```javascript
+// Solution 1
 const findChildren = (santasList, children) => [
   ...new Set(children.filter(el => santasList.includes(el)).sort()),
 ];
+// Solution 2
+const findChildren = (santasList, children) =>
+  children
+    .filter((el, i, arr) => santasList.includes(el) && i === arr.indexOf(el))
+    .sort();
+// Solution 3
+const findChildren = (santasList, children) => {
+  const arr = [];
+  for (let item of santasList) {
+    for (let child of children) {
+      if (item === child && !arr.includes(item)) arr.push(item);
+    }
+  }
+  return arr.sort();
+};
 ```
 #### [You're a square!](https://www.codewars.com/kata//54c27a33fb7da0db0100040e)
 ```javascript
