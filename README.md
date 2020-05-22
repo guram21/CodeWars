@@ -1021,18 +1021,11 @@ const slope = ([a, b, c, d]) => (a === c ? 'undefined' : `${(b - d) / (a - c)}`)
 ```
 #### [Grasshopper - Make change](https://www.codewars.com/kata//560dab9f8b50f89fd6000070)
 ```javascript
-// Solution 1
 const money = 10,
   candy = 1.42,
   chips = 2.4,
   soda = 1,
   change = money - candy - chips - soda;
-// Solution 2
-const change = (money = 10) - (candy = 1.42) - (chips = 2.4) - (soda = 1);
-// Solution 3
-const [money, candy, chips, soda, change] = '10$1.42$2.40$1.00$5.18'
-  .split('$')
-  .map(Number);
 ```
 #### [Grasshopper - Basic Function Fixer](https://www.codewars.com/kata//56200d610758762fb0000002)
 ```javascript
