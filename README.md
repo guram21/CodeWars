@@ -1701,3 +1701,25 @@ const points = games =>
 ```javascript
 const any = (arr, fun) => arr.some(fun);
 ```
+#### [Square(n) Sum](https://www.codewars.com/kata//515e271a311df0350d00000f)
+```javascript
+// Solution 1
+const squareSum = num => {
+  let sum = 0;
+  for (let i = 0; i < num.length; i++) {
+    sum += Math.pow(num[i], 2);
+  }
+  return sum;
+};
+// Solution 2
+const squareSum = num => {
+  let sum = 0;
+  num.forEach(el => {
+    sum += el ** 2;
+  });
+  return sum;
+};
+// Solution 3
+const squareSum = num =>
+  num.reduce((acc, curr) => acc + curr * curr, 0);
+```
