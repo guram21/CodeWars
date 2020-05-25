@@ -1697,3 +1697,7 @@ const points = games =>
     return acc += curr[0] > curr[2] ? 3 : curr[0] === curr[2] ? 1 : 0;
   }, 0);
 ```
+#### [Enumerable Magic #2 - True for Any?](https://www.codewars.com/kata//54598e89cbae2ac001001135)
+```javascript
+const any = (arr, fun) => arr.some(fun);
+```
