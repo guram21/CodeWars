@@ -205,13 +205,13 @@ const typeOfSum = (a, b) => typeof (a + b);
 #### [Convert a Number to a String!](https://www.codewars.com/kata//5265326f5fda8eb1160004c8)
 ```javascript
 // Solution 1
-var numberToString = num => num.toString();
+const numberToString = num => num.toString();
 // Solution 2
-var numberToString = num => String(num);
+const numberToString = num => String(num);
 // Solution 3
-var numberToString = num => num + '';
+const numberToString = num => num + '';
 // Solution 4
-var numberToString = num => `${num}`;
+const numberToString = num => `${num}`;
 ```
 #### [Number toString](https://www.codewars.com/kata//53934feec44762736c00044b)
 ```javascript
@@ -680,7 +680,7 @@ const basicOp = (operation, value1, value2) => {
 };
 // Solution 2
 const basicOp = (operation, value1, value2) => {
-  var cases = {
+  const cases = {
     '+': value1 + value2,
     '-': value1 - value2,
     '*': value1 * value2,
@@ -1612,7 +1612,7 @@ const findDifference = (a, b) =>
 const findDifference = (a, b) =>
   Math.abs(a[0] * a[1] * a[2] - b[0] * b[1] * b[2]);
 // Solution 3
-var findDifference = (a, b) => (
+const findDifference = (a, b) => (
   (c = (a, b) => a * b), Math.abs(a.reduce(c) - b.reduce(c))
 );
 // Solution 3
@@ -1621,7 +1621,7 @@ const findDifference = (a, b) =>
     a.reduce((acc, curr) => acc * curr) - b.reduce((acc, curr) => acc * curr)
   );
 // Solution 4
-var findDifference = (a, b, A = 1, B = 1) => {
+const findDifference = (a, b, A = 1, B = 1) => {
   a.map(el => A *= el);
   b.map(el => B *= el);
   return Math.abs(A - B);
