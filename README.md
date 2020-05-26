@@ -1760,3 +1760,22 @@ const positiveSum = arr => {
 // Solution 3
 const positiveSum = arr => arr.reduce((acc, curr) => acc + (curr > 0 && curr), 0);
 ```
+#### [Calculate average](https://www.codewars.com/kata//57a2013acf1fa5bfc4000921)
+```javascript
+// Solution 1
+const find_average = arr => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
+// Solution 2
+const find_average = arr => {
+  let sum = 0;
+  arr.forEach(el => sum += el);
+  return sum / arr.length;
+};
+// Solution 3
+const find_average = arr => arr.reduce((acc, curr) => acc + curr, 0) / arr.length;
+```
