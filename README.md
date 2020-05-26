@@ -1723,3 +1723,23 @@ const squareSum = num => {
 const squareSum = num =>
   num.reduce((acc, curr) => acc + curr * curr, 0);
 ```
+#### [How good are you really?](https://www.codewars.com/kata//5601409514fc93442500010b)
+```javascript
+// Solution 1
+const betterThanAverage = (classPoints, yourPoints) => {
+  let sum = 0;
+  for (let i = 0; i < classPoints.length; i++) {
+    sum += classPoints[i];
+  }
+  return sum / classPoints.length < yourPoints;
+};
+//2 Solution
+const betterThanAverage = (classPoints, yourPoints) => {
+  let sum = 0;
+  classPoints.forEach(el => sum += el);
+  return sum / classPoints.length < yourPoints;
+};
+// Solution 3
+const betterThanAverage = (classPoints, yourPoints) =>
+  classPoints.reduce((acc, curr) => acc + curr, 0) / classPoints.length < yourPoints;
+```
