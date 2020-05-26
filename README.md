@@ -1779,3 +1779,25 @@ const find_average = arr => {
 // Solution 3
 const find_average = arr => arr.reduce((acc, curr) => acc + curr, 0) / arr.length;
 ```
+#### [Divide and Conquer](https://www.codewars.com/kata//57eaec5608fed543d6000021)
+```javascript
+// Solution 1
+const divCon = arr => {
+  let sumNum = 0;
+  let sumStr = 0;
+  for (let i = 0; i < arr.length; i++) {
+    +arr[i] === arr[i] ? sumNum += arr[i] : sumStr += +arr[i];
+  }
+  return sumNum - sumStr;
+};
+// Solution 2
+const divCon = arr => {
+  let sumNum = 0;
+  let sumStr = 0;
+  arr.forEach(el => +el === el ? sumNum += el : sumStr += +el);
+  return sumNum - sumStr;
+};
+// Solution 3
+const divCon = arr =>
+  arr.reduce((acc, curr) => +curr === curr ? acc + curr : acc - +curr, 0);
+```
