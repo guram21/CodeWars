@@ -1714,9 +1714,7 @@ const squareSum = num => {
 // Solution 2
 const squareSum = num => {
   let sum = 0;
-  num.forEach(el => {
-    sum += el ** 2;
-  });
+  num.forEach(el => sum += el ** 2);
   return sum;
 };
 // Solution 3
