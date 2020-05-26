@@ -1741,3 +1741,22 @@ const betterThanAverage = (classPoints, yourPoints) => {
 const betterThanAverage = (classPoints, yourPoints) =>
   classPoints.reduce((acc, curr) => acc + curr, 0) / classPoints.length < yourPoints;
 ```
+#### [Sum of positive](https://www.codewars.com/kata//5715eaedb436cf5606000381)
+```javascript
+// Solution 1
+const positiveSum = arr => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) sum += arr[i];
+  }
+  return sum;
+};
+// Solution 2
+const positiveSum = arr => {
+  let sum = 0;
+  arr.forEach(el => el > 0 ? sum += el : 0);
+  return sum;
+};
+// Solution 3
+const positiveSum = arr => arr.reduce((acc, curr) => acc + (curr > 0 && curr), 0);
+```
