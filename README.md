@@ -1857,3 +1857,46 @@ const oddOrEven = arr => {
 const oddOrEven = arr =>
   arr.reduce((acc, curr) => acc + curr, 0) % 2 ? 'odd' : 'even';
 ```
+#### [Sum without highest and lowest number](https://www.codewars.com/kata//576b93db1129fcf2200001e6)
+```javascript
+// Solution 1
+const sumArray = arr => {
+  if (!arr || arr.length <= 1) return 0;
+  let min = arr[0],
+    max = arr[0],
+    sum = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) min = arr[i];
+    if (arr[i] > max) max = arr[i];
+    sum += arr[i];
+  }
+  return sum - min - max;
+};
+// Solution 2
+const sumArray = arr => {
+  if (!arr || arr.length <= 1) return 0;
+  let min = arr[0],
+    max = arr[0],
+    sum = 0;
+  arr.forEach(el => {
+    if (el < min) min = el;
+    if (el > max) max = el;
+    sum += el;
+  });
+  return sum - min - max;
+};
+// Solution 3
+const sumArray = arr => {
+  return Array.isArray(arr) && arr.length > 1
+    ? arr.reduce((s, n) => s + n, 0) - Math.min(...arr) - Math.max(...arr)
+    : 0;
+};
+// Solution 4
+const sumArray = arr =>
+  arr
+    ? arr
+      .sort((a, b) => a - b)
+      .slice(1, -1)
+      .reduce((acc, curr) => acc + curr, 0)
+    : 0;
+```
