@@ -1900,3 +1900,27 @@ const sumArray = arr =>
       .reduce((acc, curr) => acc + curr, 0)
     : 0;
 ```
+#### [Find Maximum and Minimum Values of a List](https://www.codewars.com/kata//577a98a6ae28071780000989)
+```javascript
+// Solution 1
+const min = arr => Math.min(...arr),
+  max = arr => Math.max(...arr);
+// Solution 2
+const min = arr => arr.sort((a, b) => a - b)[0],
+  max = arr => arr.sort((a, b) => b - a)[0];
+// Solution 3
+const min = arr => {
+  let min = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) min = arr[i];
+  }
+  return min;
+};
+const max = arr => {
+  let max = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (max < arr[i]) max = arr[i];
+  }
+  return max;
+};
+```
