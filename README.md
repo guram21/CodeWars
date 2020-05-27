@@ -1801,3 +1801,39 @@ const divCon = arr => {
 const divCon = arr =>
   arr.reduce((acc, curr) => +curr === curr ? acc + curr : acc - +curr, 0);
 ```
+#### [Sum of Odd Cubed Numbers](https://www.codewars.com/kata//580dda86c40fa6c45f00028a)
+```javascript
+// Solution 1
+const cubeOdd = arr => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] !== 'number') return undefined;
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2) sum += arr[i] ** 3;
+  }
+  return sum;
+};
+// Solution 2
+const cubeOdd = arr => {
+  let sum = 0;
+  let cubed = arr.map(item => item ** 3);
+  cubed.forEach(el => el % 2 ? (sum += el) : (sum += 0));
+  return cubed.includes(NaN) ? undefined : sum;
+};
+// Solution 3
+const cubeOdd = arr => {
+  arr = arr
+    .filter(el => el % 2 !== 0)
+    .reduce((acc, curr) => acc + curr ** 3, 0);
+  return isNaN(arr) ? undefined : arr;
+};
+// Solution 4
+const cubeOdd = arr =>
+  !arr.some(isNaN)
+    ? arr
+      .map(el => el ** 3)
+      .filter(el => el % 2)
+      .reduce((acc, curr) => acc + curr, 0)
+    : undefined;
+```
