@@ -1837,3 +1837,23 @@ const cubeOdd = arr =>
       .reduce((acc, curr) => acc + curr, 0)
     : undefined;
 ```
+#### [Odd or Even?](https://www.codewars.com/kata//5949481f86420f59480000e7)
+```javascript
+// Solution 1
+const oddOrEven = arr => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum % 2 ? 'odd' : 'even';
+};
+// Solution 2
+const oddOrEven = arr => {
+  let sum = 0;
+  arr.forEach(el => sum += el);
+  return sum % 2 ? 'odd' : 'even';
+};
+// Solution 3
+const oddOrEven = arr =>
+  arr.reduce((acc, curr) => acc + curr, 0) % 2 ? 'odd' : 'even';
+```
