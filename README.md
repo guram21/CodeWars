@@ -1927,7 +1927,7 @@ const max = arr => {
 #### [Remove the minimum](https://www.codewars.com/kata//563cf89eb4747c5fb100001b)
 ```javascript
 // Solution 1
-var removeSmallest = num => {
+const removeSmallest = num => {
   let arr = [];
   let min = Math.min(...num);
   let index = num.indexOf(min);
@@ -1937,16 +1937,32 @@ var removeSmallest = num => {
   return arr;
 };
 // Solution 2
-var removeSmallest = num => {
+const removeSmallest = num => {
   let arr = [...num];
   let min = Math.min.apply(null, arr);
   arr.splice(arr.indexOf(min), 1);
   return arr;
 };
 // Solution 3
-var removeSmallest = num => {
-  var arr = num.concat();
+const removeSmallest = num => {
+  let arr = num.concat();
   arr.splice(num.indexOf(Math.min(...num)), 1);
   return arr;
+};
+```
+#### [Find the divisors!](https://www.codewars.com/kata//544aed4c4a30184e960010f4)
+```javascript
+// Solution 1
+const divisors = num => {
+  let arr = [];
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) arr.push(i);
+  }
+  return arr.length ? arr : `${num} is prime`;
+};
+// Solution 2
+const divisors = num => {
+  let arr = [...Array(num).keys()].slice(2, num).filter(el => num % el === 0);
+  return arr.length > 0 ? arr : `${num} is prime`;
 };
 ```
