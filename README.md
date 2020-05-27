@@ -1924,3 +1924,29 @@ const max = arr => {
   return max;
 };
 ```
+#### [Remove the minimum](https://www.codewars.com/kata//563cf89eb4747c5fb100001b)
+```javascript
+// Solution 1
+var removeSmallest = num => {
+  let arr = [];
+  let min = Math.min(...num);
+  let index = num.indexOf(min);
+  for (let i = 0; i < num.length; i++) {
+    if (i !== index) arr.push(num[i]);
+  }
+  return arr;
+};
+// Solution 2
+var removeSmallest = num => {
+  let arr = [...num];
+  let min = Math.min.apply(null, arr);
+  arr.splice(arr.indexOf(min), 1);
+  return arr;
+};
+// Solution 3
+var removeSmallest = num => {
+  var arr = num.concat();
+  arr.splice(num.indexOf(Math.min(...num)), 1);
+  return arr;
+};
+```
