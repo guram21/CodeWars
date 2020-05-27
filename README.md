@@ -1966,3 +1966,29 @@ const divisors = num => {
   return arr.length > 0 ? arr : `${num} is prime`;
 };
 ```
+#### [Count by X](https://www.codewars.com/kata//5513795bd3fafb56c200049e)
+```javascript
+// Solution 1
+const countBy = (x, n) => {
+  let arr = [];
+  for (let i = x, t = n; t > 0; i += x) {
+    arr.push(i);
+    t--;
+  }
+  return arr;
+};
+// Solution 2
+const countBy = (x, n) => {
+  let arr = [];
+  for (let i = 1; i <= n; i++) {
+    arr.push(x * i);
+  }
+  return arr;
+};
+// Solution 3
+const countBy = (x, n) => {
+  let arr = [];
+  while (arr.length < n) arr.push(x * (arr.length + 1));
+  return arr;
+};
+```
