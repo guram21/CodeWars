@@ -2143,3 +2143,16 @@ const check = (arr, el) => arr.includes(el);
 ```javascript
 const check = (arr, el) => arr.includes(el);
 ```
+#### [Be Concise IV - Index of an element in an array](https://www.codewars.com/kata//5703c093022cd1aae90012c9)
+```javascript
+// Solution 1
+const find = (arr, el, i = arr.indexOf(el)) => i < 0 ? 'Not found' : i;
+// Solution 2
+const find = (arr, el, i = arr.indexOf(el)) => i >= 0 ? i : 'Not found';
+// Solution 3
+const find = (arr, el) => (el = arr.indexOf(el)) >= 0 ? el : 'Not found';
+// Solution 4
+const find = (arr, el) => arr.includes(el) ? arr.indexOf(el) : 'Not found';
+// Solution 5
+const find = (arr, el) => (el => el >= 0 ? el : 'Not found')(arr.indexOf(el));
+```
