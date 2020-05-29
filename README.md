@@ -2090,3 +2090,31 @@ const powersOfTwo = num =>
 // Solution 4
 const powersOfTwo = num => Array.from({ length: ++num }, (_, i) => 2 ** i);
 ```
+#### [Reversed sequence](https://www.codewars.com/kata//5a00e05cc374cb34d100000d)
+```javascript
+// Solution 1
+const reverseSeq = num => {
+  let arr = [];
+  for (let i = num; i > 0; i--) {
+    arr.push(i);
+  }
+  return arr;
+};
+// Solution 2
+const reverseSeq = num =>
+  Array(num)
+    .fill(0)
+    .map(_ => num--);
+// Solution 3
+const reverseSeq = num => Array.from({ length: num }, () => num--);
+// Solution 4
+const reverseSeq = num => Array.from({ length: num }, (_, i) => ++i).reverse();
+// Solution 5
+const reverseSeq = num => [...Array(num)].map(_ => num--);
+// Solution 6
+const reverseSeq = num => [...Array(num).keys()].map(_ => num--);
+// Solution 7
+const reverseSeq = num => [...Array(num).keys()].map(el => ++el).reverse();
+// Solution 8
+const reverseSeq = num => num < 2 ? [num] : [num].concat(reverseSeq(--num));
+```
