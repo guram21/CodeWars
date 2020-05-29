@@ -2118,3 +2118,20 @@ const reverseSeq = num => [...Array(num).keys()].map(el => ++el).reverse();
 // Solution 8
 const reverseSeq = num => num < 2 ? [num] : [num].concat(reverseSeq(--num));
 ```
+#### [Training JS #4: Basic data types--Array](https://www.codewars.com/kata//571effabb625ed9b0600107a)
+```javascript
+const getLength = arr => arr.length;
+
+var getFirst = arr => arr.shift();
+var getFirst = arr => arr[0];
+
+var getLast = arr => arr.pop();
+var getLast = arr => arr.slice(-1)[0];
+var getLast = arr => arr[arr.length - 1];
+
+var pushElement = arr => (arr.push(0), arr);
+var pushElement = arr => arr.concat(0);
+
+var popElement = arr => (arr.pop(), arr);
+var popElement = arr => arr.slice(0, -1);
+```
