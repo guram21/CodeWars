@@ -2050,3 +2050,23 @@ const pickIt = arr => [
 ];
 */
 ```
+#### [Pre-FizzBuzz Workout #1](https://www.codewars.com/kata//569e09850a8e371ab200000b)
+```javascript
+// Solution 1
+const preFizz = num => {
+  let arr = [];
+  for (let i = 1; i <= num; i++) {
+    arr.push(i);
+  }
+  return arr;
+};
+// Solution 2
+const preFizz = num =>
+  Array(num)
+    .fill(1)
+    .map((el, i) => el + i);
+// Solution 3
+const preFizz = num => Array(...Array(num)).map((el, i) => ++i);
+// Solution 4
+const preFizz = num => Array.from({ length: num }, (el, i) => ++i);
+```
