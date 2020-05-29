@@ -2070,3 +2070,23 @@ const preFizz = num => Array(...Array(num)).map((el, i) => ++i);
 // Solution 4
 const preFizz = num => Array.from({ length: num }, (el, i) => ++i);
 ```
+#### [Powers of 2](https://www.codewars.com/kata//57a083a57cb1f31db7000028)
+```javascript
+// Solution 1
+const powersOfTwo = num => {
+  const arr = [];
+  for (let i = 0; i <= num; i++) {
+    arr.push(2 ** i);
+  }
+  return arr;
+};
+// Solution 2
+const powersOfTwo = num => [...Array(++num)].map((_, i) => 2 ** i);
+// Solution 3
+const powersOfTwo = num =>
+  Array(++num)
+    .fill(0)
+    .map((_, i) => 2 ** i);
+// Solution 4
+const powersOfTwo = num => Array.from({ length: ++num }, (_, i) => 2 ** i);
+```
