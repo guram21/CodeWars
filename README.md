@@ -2012,3 +2012,41 @@ const createArray = num => Array(...Array(num)).map((el, i) => i + 1);
 // Solution 4
 const createArray = num => Array.from({ length: num }, (el, i) => i + 1);
 ```
+#### [Training JS #10: loop statement --for](https://www.codewars.com/kata//5721a78c283129e416000999)
+```javascript
+// Solution 1
+const pickIt = arr => {
+  const odd = [],
+    even = [];
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] % 2 ? odd.push(arr[i]) : even.push(arr[i]);
+  }
+  return [odd, even];
+};
+// Solution 2
+const pickIt = arr => {
+  const odd = [],
+    even = [];
+  for (let el of arr) (el % 2 ? odd : even).push(el);
+  return [odd, even];
+};
+// Solution 3
+const pickIt = arr => {
+  const oddEven = [[], []];
+  for (let el of arr) oddEven[~el & 1].push(el);
+  return oddEven;
+};
+/*
+const pickIt = arr => {
+  const odd = [],
+    even = [];
+  arr.forEach(el => el % 2 ? odd.push(el) : even.push(el));
+  return [odd, even];
+};
+
+const pickIt = arr => [
+  arr.filter(el => el % 2),
+  arr.filter(el => !(el % 2)),
+];
+*/
+```
