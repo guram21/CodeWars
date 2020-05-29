@@ -2135,3 +2135,7 @@ var pushElement = arr => arr.concat(0);
 var popElement = arr => (arr.pop(), arr);
 var popElement = arr => arr.slice(0, -1);
 ```
+#### [No Loops 2 - You only need one](https://www.codewars.com/kata//57cc40b2f8392dbf2a0003ce)
+```javascript
+const check = (arr, el) => arr.includes(el);
+```
