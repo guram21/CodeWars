@@ -1992,3 +1992,23 @@ const countBy = (x, n) => {
   return arr;
 };
 ```
+#### [Unfinished Loop - Bug Fixing #1](https://www.codewars.com/kata//55c28f7304e3eaebef0000da)
+```javascript
+// Solution 1
+const createArray = num => {
+  let arr = [];
+  for (let i = 1; i <= num; i++) {
+    arr.push(i);
+  }
+  return arr;
+};
+// Solution 2
+const createArray = num =>
+  Array(num)
+    .fill(1)
+    .map((el, i) => el + i);
+// Solution 3
+const createArray = num => Array(...Array(num)).map((el, i) => i + 1);
+// Solution 4
+const createArray = num => Array.from({ length: num }, (el, i) => i + 1);
+```
