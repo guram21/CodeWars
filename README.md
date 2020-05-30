@@ -2104,15 +2104,15 @@ const reverseSeq = num => {
 const reverseSeq = num =>
   Array(num)
     .fill(0)
-    .map(_ => num--);
+    .map(() => num--);
 // Solution 3
 const reverseSeq = num => Array.from({ length: num }, () => num--);
 // Solution 4
 const reverseSeq = num => Array.from({ length: num }, (_, i) => ++i).reverse();
 // Solution 5
-const reverseSeq = num => [...Array(num)].map(_ => num--);
+const reverseSeq = num => [...Array(num)].map(() => num--);
 // Solution 6
-const reverseSeq = num => [...Array(num).keys()].map(_ => num--);
+const reverseSeq = num => [...Array(num).keys()].map(() => num--);
 // Solution 7
 const reverseSeq = num => [...Array(num).keys()].map(el => ++el).reverse();
 // Solution 8
@@ -2122,18 +2122,18 @@ const reverseSeq = num => num < 2 ? [num] : [num].concat(reverseSeq(--num));
 ```javascript
 const getLength = arr => arr.length;
 
-var getFirst = arr => arr.shift();
-var getFirst = arr => arr[0];
+const getFirst = arr => arr.shift();
+// const getFirst = arr => arr[0];
 
-var getLast = arr => arr.pop();
-var getLast = arr => arr.slice(-1)[0];
-var getLast = arr => arr[arr.length - 1];
+const getLast = arr => arr.pop();
+// const getLast = arr => arr.slice(-1)[0];
+// const getLast = arr => arr[arr.length - 1];
 
-var pushElement = arr => (arr.push(0), arr);
-var pushElement = arr => arr.concat(0);
+const pushElement = arr => (arr.push(0), arr);
+// const pushElement = arr => arr.concat(0);
 
-var popElement = arr => (arr.pop(), arr);
-var popElement = arr => arr.slice(0, -1);
+const popElement = arr => (arr.pop(), arr);
+// const popElement = arr => arr.slice(0, -1);
 ```
 #### [No Loops 2 - You only need one](https://www.codewars.com/kata//57cc40b2f8392dbf2a0003ce)
 ```javascript
