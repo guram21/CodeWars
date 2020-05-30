@@ -2156,3 +2156,10 @@ const find = (arr, el) => arr.includes(el) ? arr.indexOf(el) : 'Not found';
 // Solution 5
 const find = (arr, el) => (el => el >= 0 ? el : 'Not found')(arr.indexOf(el));
 ```
+#### [Find numbers which are divisible by given number](https://www.codewars.com/kata//55edaba99da3a9c84000003b)
+```javascript
+// Solution 1
+const divisibleBy = (num, div) => num.filter(el => el % div === 0);
+// Solution 2
+const divisibleBy = (num, div) => num.filter(el => !(el % div));
+```
