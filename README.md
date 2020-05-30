@@ -4335,3 +4335,52 @@ const removeEveryOther = arr => arr.filter((el, i) => i % 2 === 0);
 // Solution 2
 const removeEveryOther = arr => arr.filter((el, i) => !(i % 2));
 ```
+#### [Well of Ideas - Easy Version](https://www.codewars.com/kata//57f222ce69e09c3630000212)
+```
+// Solution 1
+const well = arr => {
+  const good = arr.filter(el => el === 'good').length;
+  return good < 1 ? 'Fail!' : good < 3 ? 'Publish!' : 'I smell a series!';
+};
+// Solution 2
+const well = arr => (
+  (good = arr.filter(el => el === 'good').length),
+  good < 1 ? 'Fail!' : good < 3 ? 'Publish!' : 'I smell a series!'
+);
+// Solution 3
+const well = arr => {
+  let good = 0;
+  for (let i = 0; i < arr.length; ++i)
+    if (arr[i] === 'good' && ++good > 2) return 'I smell a series!';
+  return good ? 'Publish!' : 'Fail!';
+};
+// Solution 4
+const well = arr => {
+  let good = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 'good') {
+      good++;
+      if (good === 3) break;
+    }
+  }
+  return ['Fail!', 'Publish!', 'Publish!', 'I smell a series!'][good];
+};
+// Solution 5
+const well = arr => {
+  const good = arr.reduce((a, b) => a + (b === 'good'), 0);
+  return good ? (good > 2 ? 'I smell a series!' : 'Publish!') : 'Fail!';
+};
+// Solution 6
+const well = arr =>
+  arr.includes('good')
+    ? arr.filter(el => el === 'good').length < 3
+      ? 'Publish!'
+      : 'I smell a series!'
+    : 'Fail!';
+// Solution 7
+const well = (arr, good = 'good') => {
+  let a = 0;
+  arr.map(el => el === good ? a++ : null);
+  return !a ? 'Fail!' : a <= 2 ? 'Publish!' : 'I smell a series!';
+};
+```
