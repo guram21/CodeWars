@@ -4415,3 +4415,16 @@ const filterEvenLengthWords = words => words.filter(el => !(el.length % 2));
 // Solution 2
 const filterEvenLengthWords = words => words.filter(el => el.length % 2 === 0);
 ```
+#### [Array.diff](https://www.codewars.com/kata//523f5d21c841566fde000009)
+```javascript
+// Solution 1
+const arrayDiff = (a, b) => a.filter(el => !b.includes(el));
+// Solution 2
+const arrayDiff = (a, b) => {
+  const arr = [];
+  for (let i = 0; i < a.length; i++) {
+    if (b.indexOf(a[i]) < 0) arr.push(a[i]);
+  }
+  return arr;
+};
+```
