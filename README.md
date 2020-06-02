@@ -4408,3 +4408,10 @@ const countWins = (winnerList, country) => {
   return count;
 };
 ```
+#### [filterEvenLengthWords](https://www.codewars.com/kata//59564f3bcc15b5591a00004a)
+```javascript
+// Solution 1
+const filterEvenLengthWords = words => words.filter(el => !(el.length % 2));
+// Solution 2
+const filterEvenLengthWords = words => words.filter(el => el.length % 2 === 0);
+```
