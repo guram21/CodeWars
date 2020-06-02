@@ -4384,3 +4384,10 @@ const well = (arr, good = 'good') => {
   return !a ? 'Fail!' : a <= 2 ? 'Publish!' : 'I smell a series!';
 };
 ```
+#### [JavaScript Array Filter](https://www.codewars.com/kata//514a6336889283a3d2000001)
+```
+// Solution 1
+const getEvenNumbers = arr => arr.filter(el => !(el % 2));
+// Solution 2
+const getEvenNumbers = arr => arr.filter(el => el % 2 === 0);
+```
