@@ -4336,7 +4336,7 @@ const removeEveryOther = arr => arr.filter((el, i) => i % 2 === 0);
 const removeEveryOther = arr => arr.filter((el, i) => !(i % 2));
 ```
 #### [Well of Ideas - Easy Version](https://www.codewars.com/kata//57f222ce69e09c3630000212)
-```
+```javascript
 // Solution 1
 const well = arr => {
   const good = arr.filter(el => el === 'good').length;
@@ -4385,9 +4385,26 @@ const well = (arr, good = 'good') => {
 };
 ```
 #### [JavaScript Array Filter](https://www.codewars.com/kata//514a6336889283a3d2000001)
-```
+```javascript
 // Solution 1
 const getEvenNumbers = arr => arr.filter(el => !(el % 2));
 // Solution 2
 const getEvenNumbers = arr => arr.filter(el => el % 2 === 0);
+```
+#### [Find how many times did a team from a given country win the Champions League?](https://www.codewars.com/kata//581b30af1ef8ee6aea0015b9)
+```javascript
+// Solution 1
+const countWins = (winnerList, country) =>
+  winnerList.filter(el => el.country === country).length;
+// Solution 2
+const countWins = (winnerList, country) =>
+  winnerList.reduce((a, b) => a + (b['country'] === country ? 1 : 0), 0);
+// Solution 3
+const countWins = (winnerList, country) => {
+  let count = 0;
+  for (let i = 0; i < winnerList.length; i++) {
+    if (winnerList[i].country === country) count += 1;
+  }
+  return count;
+};
 ```
