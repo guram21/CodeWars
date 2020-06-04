@@ -4437,3 +4437,7 @@ const duplicates = arr =>
 ```javascript
 const unique = arr => arr.filter((el, i) => i === arr.indexOf(el));
 ```
+#### [My head is at the wrong end!](https://www.codewars.com/kata//56f699cd9400f5b7d8000b55)
+```javascript
+const fixTheMeerkat = arr => arr.reverse();
+```
