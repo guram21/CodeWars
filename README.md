@@ -4433,3 +4433,7 @@ const arrayDiff = (a, b) => {
 const duplicates = arr =>
   arr.filter((el, i) => i !== arr.indexOf(el) && i === arr.lastIndexOf(el));
 ```
+#### [Train to remove duplicates from an array with filter()](https://www.codewars.com/kata//58308360aeb69a460b0002b2)
+```javascript
+const unique = arr => arr.filter((el, i) => i === arr.indexOf(el));
+```
