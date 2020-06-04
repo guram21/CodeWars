@@ -4428,3 +4428,8 @@ const arrayDiff = (a, b) => {
   return arr;
 };
 ```
+#### [Find Duplicates](https://www.codewars.com/kata//5558cc216a7a231ac9000022)
+```javascript
+const duplicates = arr =>
+  arr.filter((el, i) => i !== arr.indexOf(el) && i === arr.lastIndexOf(el));
+```
