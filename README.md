@@ -4441,3 +4441,31 @@ const unique = arr => arr.filter((el, i) => i === arr.indexOf(el));
 ```javascript
 const fixTheMeerkat = arr => arr.reverse();
 ```
+#### [Convert number to reversed array of digits](https://www.codewars.com/kata//5583090cbe83f4fd8c000051)
+```javascript
+// Solution 1
+const digitize = num => num.toString().split('').map(Number).reverse();
+// Solution 2
+const digitize = num => String(num).split('').map(Number).reverse();
+// Solution 3
+const digitize = num => (num + '').split('').map(Number).reverse();
+// Solution 4
+const digitize = num => Array.from(String(num), Number).reverse();
+// Solution 5
+const digitize = num => [...String(num)].map(Number).reverse();
+// Solution 6
+const digitize = num =>
+  `${num}`
+    .split('')
+    .reverse()
+    .map(el => +el);
+// Solution 7
+const digitize = num => {
+  const str = num + '',
+    res = [];
+  for (let i = str.length - 1; i >= 0; i--) {
+    res.push(+str[i]);
+  }
+  return res;
+};
+```
