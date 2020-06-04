@@ -4473,3 +4473,16 @@ const digitize = num => {
 ```javascript
 const twoOldestAges = ages => ages.sort((a, b) => a - b).slice(-2);
 ```
+#### [Sum of two lowest positive integers](https://www.codewars.com/kata//558fc85d8fd1938afb000014)
+```javascript
+// Solution 1
+const sumTwoSmallestNumbers = num => {
+  num = num.sort((a, b) => a - b);
+  return num[0] + num[1];
+};
+// Solution 2
+const sumTwoSmallestNumbers = num => {
+  const [a, b] = num.sort((a, b) => a - b);
+  return a + b;
+};
+```
