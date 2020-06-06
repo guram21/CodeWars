@@ -4486,3 +4486,85 @@ const sumTwoSmallestNumbers = num => {
   return a + b;
 };
 ```
+#### [Simple parenthesis removal](https://www.codewars.com/kata//5a3bedd38f27f246c200005f)
+```javascript
+// Solution 1
+const solve = s => {
+  let k = 1,
+    x = 1,
+    t = 0,
+    chars = '';
+  for (let char of s)
+    if (char === '(') {
+      t === 1 && k === -1 ? (k *= x) : (k = x);
+      if (t === 1) x = 1;
+    } else if (char === ')') {
+      k = 1;
+      x = 1;
+    } else if (char === '+') x = 1;
+    else if (char === '-') x *= -1;
+    else {
+      if (t === 0 && x === -1) chars += '-';
+      if (t === 1) {
+        x *= k;
+        if (x === 1) chars += '+';
+        else if (x === -1) chars += '-';
+      }
+      x = 1;
+      t = 1;
+      chars += char;
+    }
+  return chars;
+};
+// Solution 2
+const solve = (s) => {
+  let arr = [],
+    num = 1,
+    str = '';
+  for (let i of s) {
+    switch (i) {
+    case '(':
+      arr.push(num);
+      num = 1;
+      break;
+    case ')':
+      arr.pop();
+      num = 1;
+      break;
+    case '-':
+      num = -1;
+      break;
+    case '+':
+      num = 1;
+      break;
+    default:
+      str +=
+          (arr.reduce((acc, curr) => acc * curr, 1) * num === 1 ? '+' : '-') +
+          i;
+    }
+  }
+  return str[0] === '+' ? str.slice(1) : str;
+};
+// Solution 3
+const solve = s => {
+  let arr = [],
+    str = '',
+    num = 1;
+  for (let i of s) {
+    if (i === '(') {
+      arr.push(num);
+      num = 1;
+    } else if (i === ')') {
+      arr.pop();
+      num = 1;
+    } else if (i === '-') {
+      num = -1;
+    } else if (i === '+') {
+      num = 1;
+    } else
+      str +=
+        (arr.reduce((acc, curr) => acc * curr, 1) * num === 1 ? '+' : '-') + i;
+  }
+  return str[0] === '-' ? str : str.slice(1);
+};
+```
