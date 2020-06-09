@@ -4566,6 +4566,22 @@ const solve = s => {
         (arr.reduce((acc, curr) => acc * curr, 1) * num === 1 ? '+' : '-') + i;
   }
   return str[0] === '-' ? str : str.slice(1);
-
 };
+```
+#### [Sentence Smash](https://www.codewars.com/kata//53dc23c68a0c93699800041d)
+```javascript
+// Solution 1
+const smash = str => {
+  'use strict';
+  let res = '';
+  for (let i = 0; i < str.length; i++) {
+    res += str[i];
+    if (i !== str.length - 1) res += ' ';
+  }
+  return res;
+};
+// Solution 2
+const smash = words => words.join(' ');
+// Solution 3
+const smash = str => str.toString().replace(/,/g, ' ');
 ```
