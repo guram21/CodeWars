@@ -4593,3 +4593,7 @@ const buildString = (...template) => `I like ${template.join(', ')}!`;
 ```
 const printArray = arr => arr.join(',')
 ```
+#### [CSV representation of array](https://www.codewars.com/kata//5a34af40e1ce0eb1f5000036)
+```
+const toCsvText = arr => arr.join('\n');
+```
