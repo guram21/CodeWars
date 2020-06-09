@@ -4585,3 +4585,7 @@ const smash = words => words.join(' ');
 // Solution 3
 const smash = str => str.toString().replace(/,/g, ' ');
 ```
+#### [String Templates - Bug Fixing #5](https://www.codewars.com/kata//55c90cad4b0fe31a7200001f)
+```javascript
+const buildString = (...template) => `I like ${template.join(', ')}!`;
+```
