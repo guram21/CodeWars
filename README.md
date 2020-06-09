@@ -4566,5 +4566,6 @@ const solve = s => {
         (arr.reduce((acc, curr) => acc * curr, 1) * num === 1 ? '+' : '-') + i;
   }
   return str[0] === '-' ? str : str.slice(1);
+
 };
 ```
