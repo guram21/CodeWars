@@ -4601,3 +4601,8 @@ const toCsvText = arr => arr.join('\n');
 ```javascript
 const all = (arr, fun) => arr.every(fun);
 ```
+#### [Grasshopper - Array Mean](https://www.codewars.com/kata//55d277882e139d0b6000005d)
+```javascript
+const findAverage = num =>
+  num.reduce((acc, curr) => acc + curr, 0) / num.length;
+```
