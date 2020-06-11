@@ -4648,3 +4648,18 @@ const cutIt = arr => {
   return arr.map(str => str.slice(0, minLength));
 };
 ```
+#### [Beginner - Lost Without a Map](https://www.codewars.com/kata//57f781872e3d8ca2a000007e)
+```javascript
+// Solution 1
+const maps = arr => arr.map(el => el * 2);
+// Solution 2
+const maps = arr => arr.map(el => el + el);
+// Solution 3
+const maps = arr => {
+  const res = [];
+  for (let i = 0; i < arr.length; i++) {
+    res[i] = arr[i] * 2;
+  }
+  return res;
+};
+```
