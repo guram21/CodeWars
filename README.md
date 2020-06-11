@@ -4616,3 +4616,7 @@ const arrayMadness = (a, b) =>
   a.reduce((acc, curr) => acc + curr ** 2, 0) >
   b.reduce((acc, curr) => acc + curr ** 3, 0);
 ```
+#### [Beginner - Reduce but Grow](https://www.codewars.com/kata//57f780909f7e8e3183000078)
+```javascript
+const grow = arr => arr.reduce((acc, curr) => acc * curr, 1);
+```
