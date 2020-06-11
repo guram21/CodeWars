@@ -4610,3 +4610,9 @@ const findAverage = num =>
 ```javascript
 const sumSquares = arr => arr.reduce((acc, curr) => acc + curr ** 2, 0);
 ```
+#### [SpeedCode #2 - Array Madness](https://www.codewars.com/kata//56ff6a70e1a63ccdfa0001b1)
+```javascript
+const arrayMadness = (a, b) =>
+  a.reduce((acc, curr) => acc + curr ** 2, 0) >
+  b.reduce((acc, curr) => acc + curr ** 3, 0);
+```
