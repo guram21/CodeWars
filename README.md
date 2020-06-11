@@ -4629,7 +4629,7 @@ const arrayPlusArray = (arr1, arr2) =>
 #### [Freudian translator](https://www.codewars.com/kata//5713bc89c82eff33c60009f7)
 ```javascript
 // Solution 1
-var toFreud = str =>
+const toFreud = str =>
   str
     ? str
       .split(' ')
@@ -4637,7 +4637,14 @@ var toFreud = str =>
       .join(' ')
     : '';
 // Solution 2
-var toFreud = str => str.replace(/\S+/g, 'sex');
+const toFreud = str => str.replace(/\S+/g, 'sex');
 // Solution 3
-var toFreud = str => str.replace(/[^ ]+/g, 'sex');
+const toFreud = str => str.replace(/[^ ]+/g, 'sex');
+```
+#### [Training JS #16: Methods of String object--slice(), substring() and substr()](https://www.codewars.com/kata//57274562c8dcebe77e001012)
+```javascript
+const cutIt = arr => {
+  const minLength = Math.min(...arr.map(str => str.length));
+  return arr.map(str => str.slice(0, minLength));
+};
 ```
