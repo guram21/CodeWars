@@ -4620,3 +4620,9 @@ const arrayMadness = (a, b) =>
 ```javascript
 const grow = arr => arr.reduce((acc, curr) => acc * curr, 1);
 ```
+#### [Array plus array](https://www.codewars.com/kata//5a2be17aee1aaefe2a000151)
+```javascript
+const arrayPlusArray = (arr1, arr2) =>
+  arr1.reduce((acc, curr) => acc + curr, 0) +
+  arr2.reduce((acc, curr) => acc + curr, 0);
+```
