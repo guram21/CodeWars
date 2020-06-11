@@ -4667,3 +4667,7 @@ const maps = arr => {
 ```javascript
 const take = (arr, n) => arr.splice(0, n);
 ```
+#### [Remove First and Last Character Part Two](https://www.codewars.com/kata//570597e258b58f6edc00230d)
+```javascript
+const array = arr => arr.split(',').slice(1, -1).join(' ') || null;
+```
