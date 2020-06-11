@@ -4606,3 +4606,7 @@ const all = (arr, fun) => arr.every(fun);
 const findAverage = num =>
   num.reduce((acc, curr) => acc + curr, 0) / num.length;
 ```
+#### [Be Concise III - Sum Squares](https://www.codewars.com/kata//56f8fe6a2e6c0dc83b0008a7)
+```javascript
+const sumSquares = arr => arr.reduce((acc, curr) => acc + curr ** 2, 0);
+```
