@@ -4590,11 +4590,11 @@ const smash = str => str.toString().replace(/,/g, ' ');
 const buildString = (...template) => `I like ${template.join(', ')}!`;
 ```
 #### [Printing Array elements with Comma delimiters](https://www.codewars.com/kata//56e2f59fb2ed128081001328)
-```
+```javascript
 const printArray = arr => arr.join(',')
 ```
 #### [CSV representation of array](https://www.codewars.com/kata//5a34af40e1ce0eb1f5000036)
-```
+```javascript
 const toCsvText = arr => arr.join('\n');
 ```
 #### [Enumerable Magic #1 - True for All?](https://www.codewars.com/kata//54598d1fcbae2ae05200112c)
@@ -4625,4 +4625,19 @@ const grow = arr => arr.reduce((acc, curr) => acc * curr, 1);
 const arrayPlusArray = (arr1, arr2) =>
   arr1.reduce((acc, curr) => acc + curr, 0) +
   arr2.reduce((acc, curr) => acc + curr, 0);
+```
+#### [Freudian translator](https://www.codewars.com/kata//5713bc89c82eff33c60009f7)
+```javascript
+// Solution 1
+var toFreud = str =>
+  str
+    ? str
+      .split(' ')
+      .map(el => 'sex')
+      .join(' ')
+    : '';
+// Solution 2
+var toFreud = str => str.replace(/\S+/g, 'sex');
+// Solution 3
+var toFreud = str => str.replace(/[^ ]+/g, 'sex');
 ```
