@@ -4671,3 +4671,41 @@ const take = (arr, n) => arr.splice(0, n);
 ```javascript
 const array = arr => arr.split(',').slice(1, -1).join(' ') || null;
 ```
+#### [Vasya - Clerk](https://www.codewars.com/kata//555615a77ebc7c2c8a0000b8)
+```javascript
+const tickets = peopleInLine => {
+  let twentyFive = [], fifty = [], message = '';
+  for (let i = 0; i < peopleInLine.length; i++) if (peopleInLine[i] === 25) {
+    twentyFive.push(25);
+    message = 'YES';
+  } else if (peopleInLine[i] === 50) if (twentyFive.length === 0) {
+    i = peopleInLine.length;
+    message = 'NO';
+  } else {
+    fifty.push(50);
+    twentyFive.pop(25);
+    message = 'YES';
+  } else if (peopleInLine[i] === 100) {
+    if (fifty.length === 0 && twentyFive.length < 3) {
+      i = peopleInLine.length;
+      message = 'NO';
+    }
+    if (fifty.length > 0 && twentyFive.length === 0) {
+      i = peopleInLine.length;
+      message = 'NO';
+    }
+    if (fifty.length === 0 && twentyFive.length > 2) {
+      twentyFive.pop(25);
+      twentyFive.pop(25);
+      twentyFive.pop(25);
+      message = 'YES';
+    }
+    if (fifty.length > 0 && twentyFive.length > 0) {
+      fifty.pop(50);
+      twentyFive.pop(25);
+      message = 'YES';
+    }
+  }
+  return message;
+};
+```
