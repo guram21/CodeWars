@@ -4713,3 +4713,7 @@ const tickets = peopleInLine => {
 ```javascript
 const greet = name => name === 'Johnny' ? 'Hello, my love!' : `Hello, ${name}!`;
 ```
+#### [Template Strings](https://www.codewars.com/kata//55a14f75ceda999ced000048)
+```javascript
+const TempleStrings = (obj, feature) => `${obj} are ${feature}`;
+```
