@@ -4673,6 +4673,7 @@ const array = arr => arr.split(',').slice(1, -1).join(' ') || null;
 ```
 #### [Vasya - Clerk](https://www.codewars.com/kata//555615a77ebc7c2c8a0000b8)
 ```javascript
+// Solution 1
 const tickets = peopleInLine => {
   let twentyFive = [], fifty = [], message = '';
   for (let i = 0; i < peopleInLine.length; i++) if (peopleInLine[i] === 25) {
@@ -4707,6 +4708,23 @@ const tickets = peopleInLine => {
     }
   }
   return message;
+};
+// Solution 2
+const tickets = peopleInLine => {
+  let [c25, c50, c100] = [0, 0, 0];
+  for (let v of peopleInLine) {
+    if (v === 25) c25++;
+    if (v === 50) {
+      c50++;
+      c25--;
+    }
+    if (v === 100) {
+      c25--;
+      c50 > 0 ? c50-- : (c25 -= 2);
+    }
+    if (c25 < 0 || c50 < 0) return 'NO';
+  }
+  return 'YES';
 };
 ```
 #### [Jenny's secret message](https://www.codewars.com/kata//55225023e1be1ec8bc000390)
