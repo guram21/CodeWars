@@ -4721,3 +4721,12 @@ const TempleStrings = (obj, feature) => `${obj} are ${feature}`;
 ```javascript
 const greet = name => `Hello, ${name} how are you doing today?`;
 ```
+#### [Grasshopper - Combine strings](https://www.codewars.com/kata//55f73f66d160f1f1db000059)
+```javascript
+// Solution 1
+const combineNames = (firstName, lastName) => `${firstName} ${lastName}`;
+// Solution 2
+const combineNames = (firstName, lastName) => firstName + ' ' + lastName;
+// Solution 3
+const combineNames = (...names) => names.join(' ');
+```
