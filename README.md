@@ -4730,3 +4730,9 @@ const combineNames = (firstName, lastName) => firstName + ' ' + lastName;
 // Solution 3
 const combineNames = (...names) => names.join(' ');
 ```
+#### [Grasshopper - Variable Assignment Debug](https://www.codewars.com/kata//5612e743cab69fec6d000077)
+```javascript
+let a = 'dev';
+let b = 'Lab';
+let name = a + b;
+```
