@@ -4736,3 +4736,7 @@ let a = 'dev';
 let b = 'Lab';
 let name = a + b;
 ```
+#### [Grasshopper - Debug sayHello](https://www.codewars.com/kata//5625618b1fe21ab49f00001f)
+```javascript
+const sayHello = name => `Hello, ${name}`;
+```
