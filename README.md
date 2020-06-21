@@ -4744,3 +4744,13 @@ const sayHello = name => `Hello, ${name}`;
 ```javascript
 const derive = (coefficient,exponent) => `${coefficient * exponent}x^${--exponent}`;
 ```
+#### [If you can't sleep, just count sheep!!](https://www.codewars.com/kata//5b077ebdaf15be5c7f000077)
+```javascript
+const countSheep = num => {
+  let str = '';
+  for (let i = 1; i <= num; i++) {
+    str += `${i} sheep...`;
+  }
+  return str;
+};
+```
