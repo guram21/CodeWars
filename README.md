@@ -4728,24 +4728,26 @@ const tickets = peopleInLine => {
 };
 // Solution 3
 const tickets = peopleInLine => {
-  let m25 = 0,
-    m50 = 0;
+  let [n25, n50, n100] = [0, 0, 0];
   for (let i = 0; i < peopleInLine.length; i++) {
     switch (peopleInLine[i]) {
     case 25:
-      m25++;
+      n25++;
       break;
     case 50:
-      m25 > 0 ? m25-- : (m25 = -1);
-      m50++;
+      n50++;
+      n25--;
       break;
     case 100:
-      m25 > 0 && m50 > 0 ? m50-- : m25 > 2 ? (m25 -= 2) : (m25 = -1);
-      m25--;
+      n100++;
+      n25--;
+      if (n50) n50--;
+      else n25 -= 2;
       break;
     }
+    if ([n25, n50, n100].some(el => el < 0)) return 'NO';
   }
-  return m25 < 0 ? 'NO' : 'YES';
+  return 'YES';
 };
 ```
 #### [Jenny's secret message](https://www.codewars.com/kata//55225023e1be1ec8bc000390)
