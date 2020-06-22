@@ -4754,3 +4754,7 @@ const countSheep = num => {
   return str;
 };
 ```
+#### [get character from ASCII Value](https://www.codewars.com/kata//55ad04714f0b468e8200001c)
+```javascript
+const getChar = c => String.fromCodePoint(c);
+```
