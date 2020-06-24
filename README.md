@@ -4799,3 +4799,14 @@ const countSheep = num => {
 ```javascript
 const getChar = c => String.fromCodePoint(c);
 ```
+#### [Is this my tail?](https://www.codewars.com/kata//56f695399400f5d9ef000af5)
+```javascript
+// Solution 1
+const correctTail = (body, tail) => body[body.length - 1] === tail;
+// Solution 2
+const correctTail = (body, tail) => body.substr(-1) === tail;
+// Solution 3
+const correctTail = (body, tail) => body.slice(-1) === tail;
+// Solution 4
+const correctTail = (body, tail) => body.endsWith(tail);
+```
