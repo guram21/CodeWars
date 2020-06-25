@@ -4810,3 +4810,17 @@ const correctTail = (body, tail) => body.slice(-1) === tail;
 // Solution 4
 const correctTail = (body, tail) => body.endsWith(tail);
 ```
+#### [Abbreviate a Two Word Name](https://www.codewars.com/kata//57eadb7ecd143f4c9c0000a3)
+```javascript
+// Solution 1
+const abbrevName = name =>
+  `${name.charAt(0)}.${name.charAt(name.indexOf(' ') + 1)}`.toUpperCase();
+// Solution 2
+const abbrevName = name =>
+  name
+    .split(' ')
+    .map(el => el[0].toUpperCase())
+    .join('.');
+// Solution 3
+const abbrevName = name => name.match(/\b\w/g).join('.').toUpperCase();
+```
