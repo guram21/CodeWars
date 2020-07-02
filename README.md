@@ -4824,3 +4824,7 @@ const abbrevName = name =>
 // Solution 3
 const abbrevName = name => name.match(/\b\w/g).join('.').toUpperCase();
 ```
+#### [5 without numbers !!](https://www.codewars.com/kata/59441520102eaa25260000bf)
+```javascript
+const unusualFive = () => 'Five!'.length;
+```
