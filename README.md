@@ -4828,3 +4828,19 @@ const abbrevName = name => name.match(/\b\w/g).join('.').toUpperCase();
 ```javascript
 const unusualFive = () => 'Five!'.length;
 ```
+#### [Valid Parentheses](https://www.codewars.com/kata/52774a314c2333f0a7000688)
+```javascript
+function validParentheses(parens) {
+  let k = 0, t = true;
+  for (let i = 0; i < parens.length; i++) {
+    if (parens[i] === '(') k++;
+    if (parens[i] === ')') k--;
+    if (k < 0) {
+      t = false;
+      break;
+    }
+  }
+  if (k > 0) t = false;
+  return t;
+}
+```
